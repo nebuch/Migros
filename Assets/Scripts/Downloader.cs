@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.IO;
 using System.Collections;
 
@@ -11,11 +12,7 @@ public class Downloader : MonoBehaviour {
     public GameObject playButton, downloadButton;
     public UploadAndDownload downloader;
     public GameObject progressBar;
-    public string[] _downloadDir;
-
-    
-
-
+    public string _downloadDir;
 
     void OnEnable()
     {
@@ -41,18 +38,13 @@ public class Downloader : MonoBehaviour {
     
     // Use this for initialization
     void Start () {
-
-        //downloader.downloadDirectory = Application.persistentDataPath;
-        //downloader.downloadDirectory = "D:/Projects/Unity Projects/PulseVR/VideoApp/Assets/StreamingAssets";
-        downloader.downloadDirectory = _downloadDir[0];
+        downloader.downloadDirectory = Application.persistentDataPath + _downloadDir;
        
-        
-
     }
 
     void Update()
     {
-        if (Directory.GetFiles(_downloadDir[0]).Length != 0 )
+        if (Directory.Exists(downloader.downloadDirectory))
         {
             downloadButton.SetActive(false);
             playButton.SetActive(true);
@@ -64,12 +56,6 @@ public class Downloader : MonoBehaviour {
             playButton.SetActive(false);
             downloadFinished = false;
         }
-
-        if(downloadFinished)
-        {
-            progressBar.SetActive(false);
-        }
-        
     }
 
     public void DownloadFromUrl()
@@ -94,11 +80,16 @@ public class Downloader : MonoBehaviour {
     void OnDownloadComplete(UploadAndDownload.Data data)
     {
         downloadFinished = true;
+        progressBar.SetActive(false);
+        playButton.SetActive(true);
+        downloadButton.SetActive(false);
+        progressBar.SetActive(false);
+
     }
 
     void OnSavedToDisk(string path)
     {
-        //Debug.Log("Data saved at path : " + path);
+      
     }
 
 

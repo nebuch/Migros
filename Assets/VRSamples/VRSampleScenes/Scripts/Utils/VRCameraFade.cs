@@ -38,7 +38,7 @@ namespace VRStandardAssets.Utils
         }
 
 
-        private void Start()
+        private void OnEnable()
         {
             // If applicable set the immediate colour to be faded out and then fade in.
             if (m_FadeInOnStart)

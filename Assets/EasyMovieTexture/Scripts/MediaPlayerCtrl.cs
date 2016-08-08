@@ -12,14 +12,12 @@ using UnityEngine.UI;
 public class MediaPlayerCtrl : MonoBehaviour {
 	
 	public string m_strFileName;
-	public GameObject [] m_TargetMaterial = null; 
+	public GameObject [] m_TargetMaterial; 
 	private Texture2D m_VideoTexture = null;
 	private Texture2D m_VideoTextureDummy = null;
 	private MEDIAPLAYER_STATE m_CurrentState;
 	private int m_iCurrentSeekPosition;
 	private float m_fVolume = 1.0f;
-
-    public EasyDownloaderExample downloader;
 	
 	public bool m_bFullScreen = false;//Please use only in FullScreen prefab.
 	public bool m_bSupportRockchip = true; //Using a device support Rochchip or Low-end devices
@@ -96,7 +94,9 @@ public class MediaPlayerCtrl : MonoBehaviour {
 	public bool m_bInit = false;
 	
 	void Awake(){
-		
+
+        m_TargetMaterial[0] = GameObject.FindGameObjectWithTag("Player");
+
 		if( SystemInfo.deviceModel.Contains("rockchip"))
 		{
 			m_bSupportRockchip = true;

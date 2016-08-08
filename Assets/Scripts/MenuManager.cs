@@ -6,6 +6,8 @@ using VRStandardAssets.Menu;
 
 public class MenuManager : MonoBehaviour {
 
+    //private static MenuManager m_Instance;
+
     public GameObject[] videos;
     public GameObject[] infos;
     public MenuButton[] menuButton;
@@ -13,21 +15,34 @@ public class MenuManager : MonoBehaviour {
     public PlayButton[] playButton;
     public TrashButton[] trashButton;
 
-    // Use this for initialization
-    void Awake () {
 
-        DontDestroyOnLoad(transform.gameObject);
+    /*public static MenuManager Instance
+    {
+        get
+        {
+            if (m_Instance == null)
+            {
+                m_Instance = FindObjectOfType<MenuManager>();
+                DontDestroyOnLoad(m_Instance.gameObject);
+            }
 
-        if (FindObjectsOfType(GetType()).Length > 1)
+            return m_Instance;
+        }
+    }*/
+
+    /*private void Awake()
+    {
+        if (m_Instance == null)
+        {
+            m_Instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else if (this != m_Instance)
         {
             Destroy(gameObject);
         }
+    }*/
 
-        
-            
-
-    }
-	
 	// Update is called once per frame
 	 public void Update ()
     {
@@ -47,8 +62,8 @@ public class MenuManager : MonoBehaviour {
         }*/
 
 
-        Invoke("DisableButtons", 0.1f);
-        Invoke("EnableButtons", 0.3f);
+      //  Invoke("DisableButtons", 0.1f);
+      //  Invoke("EnableButtons", 0.3f);
 
     }
 

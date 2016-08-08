@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System;
 using System.IO;
 using VRStandardAssets.Utils;
@@ -9,14 +10,22 @@ public class TrashButton : MonoBehaviour
 
     [SerializeField] private SelectionRadial m_SelectionRadial;         // This controls when the selection is complete.
     [SerializeField] private VRInteractiveItem m_InteractiveItem;       // The interactive item for where the user should click to load the level.
+    [SerializeField] private Downloader m_downloader;
 
     private bool m_GazeOver;                                            // Whether the user is looking at the VRInteractiveItem currently.
-
+    
     public string filePathToDelete;
+
+    void Start()
+    {
+        filePathToDelete = Application.persistentDataPath + m_downloader._downloadDir;
+       
+    }
 
     void Update()
     {
         m_SelectionRadial = GameObject.Find("MainCamera").GetComponent<SelectionRadial>();
+
     }
 
     private void OnEnable()
@@ -66,7 +75,7 @@ public class TrashButton : MonoBehaviour
         if (OnButtonSelected != null)
             OnButtonSelected(this);
 
-        File.Delete(filePathToDelete);
-
+        Directory.Delete(filePathToDelete, true);
+        
     }
 }

@@ -18,7 +18,7 @@ namespace VRStandardAssets.Menu
         [SerializeField] private MenuManager manager;
 
         public GameObject videoInfo;                                        //The info item, for where each video information is shown.
-        public GameObject thumbnailsParent;
+        public MediaPlayerCtrl videoPlayer;
 
         public bool infoActive;
         private bool m_GazeOver;                                            // Whether the user is looking at the VRInteractiveItem currently.
@@ -27,7 +27,7 @@ namespace VRStandardAssets.Menu
         {
             m_SelectionRadial = GameObject.Find("MainCamera").GetComponent<SelectionRadial>();
             this.gameObject.SetActive(true);
-
+            videoPlayer.m_strFileName = null;
         }
 
         private void OnEnable ()
