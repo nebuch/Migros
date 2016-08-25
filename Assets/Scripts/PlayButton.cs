@@ -41,7 +41,7 @@ public class PlayButton : MonoBehaviour
        // videoPlayer = GameObject.Find("sphere").GetComponent<MediaPlayerCtrl>();
         cameraToActivate = GameObject.FindGameObjectWithTag("VideoCamera").GetComponent<Camera>();
         cameraToDisable = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        fadePanel = GameObject.FindGameObjectWithTag("V_FadePanel").GetComponent<Image>();
+       // fadePanel = GameObject.FindGameObjectWithTag("V_FadePanel").GetComponent<Image>();
         m_CameraFade = cameraToDisable.GetComponent<VRCameraFade>();
         audio = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioSource>();
         
