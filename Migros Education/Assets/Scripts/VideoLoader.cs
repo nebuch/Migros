@@ -40,6 +40,7 @@ public class VideoLoader : MonoBehaviour {
 		_videoPlayer.Load (_nextVideo);
 		_videoPlayer.Play ();
 	
+		Debug.Log ("new video loaded");
 	}
 
 }
