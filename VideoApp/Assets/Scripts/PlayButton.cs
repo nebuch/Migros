@@ -67,8 +67,7 @@ public class PlayButton : MonoBehaviour
         
         Debug.Log("Enabled");
 
-        videoPlayer.m_strFileName = "file:///" + downloader.downloader.downloadDirectory + "/" + videoName + ".mp4";
-
+       
         Debug.Log("Download directory: " + videoPlayer.m_strFileName);
     }
 
