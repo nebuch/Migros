@@ -54,7 +54,7 @@ public class PlayButton : MonoBehaviour
         if(buttonActivated)
             videoPlayer.m_strFileName = "file:///" + downloader.downloader.downloadDirectory + "/" + videoName + ".mp4";
 
-        Debug.Log("Download directory: " + videoPlayer.m_strFileName);
+       // Debug.Log("Download directory: " + videoPlayer.m_strFileName);
         
         
     }
@@ -66,6 +66,10 @@ public class PlayButton : MonoBehaviour
         m_SelectionRadial.OnSelectionComplete += HandleSelectionComplete;
         
         Debug.Log("Enabled");
+
+        videoPlayer.m_strFileName = "file:///" + downloader.downloader.downloadDirectory + "/" + videoName + ".mp4";
+
+        Debug.Log("Download directory: " + videoPlayer.m_strFileName);
     }
 
 
