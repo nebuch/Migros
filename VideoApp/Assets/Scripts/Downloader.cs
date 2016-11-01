@@ -39,8 +39,8 @@ public class Downloader : MonoBehaviour {
     // Use this for initialization
     void Start () {
         downloader.downloadDirectory = Application.persistentDataPath + _downloadDir;
-        
 
+        Debug.Log("Download directory: " + downloader.downloadDirectory);
 
     }
 
@@ -87,7 +87,7 @@ public class Downloader : MonoBehaviour {
         downloadButton.SetActive(false);
         progressBar.SetActive(false);
 
-       
+        Debug.Log("Downloaded to: " + downloader.downloadDirectory);
 
     }
 

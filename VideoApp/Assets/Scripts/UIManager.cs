@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.IO;
 using System.Collections;
 using VRStandardAssets.Utils;
@@ -13,6 +14,7 @@ public class UIManager : MonoBehaviour {
     public GameObject info;
     public GameObject loadingBar;
     public MenuManager manager;
+    public Text text;
    
     private void OnEnable()
     {

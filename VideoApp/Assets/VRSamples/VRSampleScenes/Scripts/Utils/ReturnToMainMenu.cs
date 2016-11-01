@@ -16,19 +16,19 @@ namespace VRStandardAssets.Utils
         [SerializeField]
         private VRCameraFade m_ScreenFadeIn;
 
-        private Camera cameraToActivate;
-        private Camera cameraToDisable;
-        private AudioSource audio;
+        public GameObject sceneToActivate;
+        public GameObject sceneToDisable;
+       // private AudioSource audio;
 
         public bool goToMenu = false;
 
         void Start()
         {
-            cameraToActivate = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-            cameraToDisable = GameObject.FindGameObjectWithTag("VideoCamera").GetComponent<Camera>();
-            m_ScreenFadeIn = cameraToActivate.GetComponent<VRCameraFade>();
+           // sceneToActivate = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+            //cameraToDisable = GameObject.FindGameObjectWithTag("VideoCamera").GetComponent<Camera>();
+           // m_ScreenFadeIn = cameraToActivate.GetComponent<VRCameraFade>();
          
-            audio = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioSource>();
+           // audio = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioSource>();
         }
 
         private void OnEnable()
@@ -57,11 +57,11 @@ namespace VRStandardAssets.Utils
             // Wait for the screen to fade out.
             yield return StartCoroutine(m_VRCameraFade.BeginFadeOut(true));
 
-            cameraToActivate.enabled = true;
-            cameraToDisable.enabled = false;
+            sceneToActivate.SetActive(true);
+            sceneToDisable.SetActive(false);
             m_ScreenFadeIn.enabled = true;
             goToMenu = true;
-            audio.mute = false;
+            GetComponent<AudioSource>().mute = false;
         }
     }
 }

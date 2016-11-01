@@ -2,7 +2,8 @@ using UnityEngine;
 using System.Collections;
 
 public class MedaiPlayerSampleGUI : MonoBehaviour {
-	
+
+
 	public MediaPlayerCtrl scrMedia;
 	
 	public bool m_bFinish = false;
@@ -19,7 +20,7 @@ public class MedaiPlayerSampleGUI : MonoBehaviour {
 
 	
 	}
-	
+	#if !UNITY_WEBGL
 	void OnGUI() {
 		
 	
@@ -65,12 +66,12 @@ public class MedaiPlayerSampleGUI : MonoBehaviour {
 		{
 			if( GUI.Button(new Rect(200,200,100,100),scrMedia.GetSeekPosition().ToString()))
 			{
-				
+				scrMedia.SetSpeed(2.0f);
 			}
 			
 			if( GUI.Button(new Rect(200,350,100,100),scrMedia.GetDuration().ToString()))
 			{
-				
+				scrMedia.SetSpeed(1.0f);
 			}
 
 			if( GUI.Button(new Rect(200,450,100,100),scrMedia.GetVideoWidth().ToString()))
@@ -91,6 +92,7 @@ public class MedaiPlayerSampleGUI : MonoBehaviour {
 	
 
 	}
+	#endif
 
 
 	

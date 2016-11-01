@@ -22,10 +22,10 @@ public class PlayButton : MonoBehaviour
     private VRInteractiveItem m_InteractiveItem;       // The interactive item for where the user should click to load the level.
      
 
-    private AudioSource audio;
-    [SerializeField] private MediaPlayerCtrl videoPlayer;
-    private Camera cameraToActivate;
-    private Camera cameraToDisable;
+  //  private AudioSource audio;
+    public MediaPlayerCtrl videoPlayer;
+    public GameObject sceneToActivate;
+    public GameObject sceneToDisable;
     [SerializeField]private Image fadePanel;
 
     public Downloader downloader;
@@ -33,17 +33,17 @@ public class PlayButton : MonoBehaviour
 
     private bool m_GazeOver;                                            // Whether the user is looking at the VRInteractiveItem currently.
     public bool buttonActivated = false;
-
+    public Text text;
 
     public void Start()
     {
         downloader.downloadFinished = true;
        // videoPlayer = GameObject.Find("sphere").GetComponent<MediaPlayerCtrl>();
-        cameraToActivate = GameObject.FindGameObjectWithTag("VideoCamera").GetComponent<Camera>();
-        cameraToDisable = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+       // cameraToActivate = GameObject.FindGameObjectWithTag("VideoCamera").GetComponent<Camera>();
+       // cameraToDisable = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
        // fadePanel = GameObject.FindGameObjectWithTag("V_FadePanel").GetComponent<Image>();
-        m_CameraFade = cameraToDisable.GetComponent<VRCameraFade>();
-        audio = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioSource>();
+       // m_CameraFade = cameraToDisable.GetComponent<VRCameraFade>();
+       // audio = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioSource>();
         
     }
 
@@ -52,7 +52,7 @@ public class PlayButton : MonoBehaviour
         m_SelectionRadial = GameObject.Find("MainCamera").GetComponent<SelectionRadial>();
         //  m_CameraFadeOut = GameObject.Find("MainCamera").GetComponent<ScreenFadeOut>();
         if(buttonActivated)
-            videoPlayer.m_strFileName = "file:///" + downloader.downloader.downloadDirectory + "/" + videoName + ".mp4";
+            videoPlayer.m_strFileName = /*"file:///" +*/  downloader.downloader.downloadDirectory + "/" + videoName + ".mp4";
 
        // Debug.Log("Download directory: " + videoPlayer.m_strFileName);
         
@@ -66,9 +66,7 @@ public class PlayButton : MonoBehaviour
         m_SelectionRadial.OnSelectionComplete += HandleSelectionComplete;
         
         Debug.Log("Enabled");
-
-       
-        Debug.Log("Download directory: " + videoPlayer.m_strFileName);
+        text.text = "file:///" + downloader.downloader.downloadDirectory + "/" + videoName + ".mp4";
     }
 
 
@@ -122,11 +120,12 @@ public class PlayButton : MonoBehaviour
         yield return StartCoroutine(m_CameraFade.BeginFadeOut(true));
 
         m_CameraFade.enabled = false;
-        cameraToActivate.enabled = true;
-        cameraToDisable.enabled = false;
-        audio.mute = true;
+        sceneToActivate.SetActive(true);
+        sceneToDisable.SetActive(false);
+       // GetComponent<AudioSource>().mute = true;
         videoPlayer.enabled = true;
         fadePanel.color = Color.clear;
         buttonActivated = true;
+
     }
 }
