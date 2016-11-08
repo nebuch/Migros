@@ -19,8 +19,6 @@ public class UIManager : MonoBehaviour {
     private void OnEnable()
     {
         m_VRInput.OnCancel += HandleCancel;
-
-        text.text = 
     }
 
 

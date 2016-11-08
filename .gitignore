@@ -28,5 +28,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-VideoApp/Library/
-VideoApp/Temp/
+Migros/Library/
+Migros/Temp/
