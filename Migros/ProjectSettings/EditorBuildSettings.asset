@@ -5,11 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu.unity
-  - enabled: 0
-    path: Assets/Scenes/Video1.unity
-  - enabled: 0
-    path: Assets/Scenes/Video2.unity
-  - enabled: 0
-    path: Assets/EasyMovieTexture/Scene/Demo_Sphere.unity
+  - enabled: 1
+    path: Assets/Scenes/VideoLoadUnloadScene.unity

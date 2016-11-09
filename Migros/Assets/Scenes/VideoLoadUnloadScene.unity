@@ -165,26 +165,10 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 499584902}
---- !u!1 &677634525
+--- !u!1 &677634525 stripped
 GameObject:
-  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: 1d50cc230c341074994f76337d1af082, type: 3}
   m_PrefabInternal: {fileID: 2019121634}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 677634530}
-  - 33: {fileID: 677634529}
-  - 23: {fileID: 677634528}
-  - 95: {fileID: 677634527}
-  - 114: {fileID: 677634526}
-  - 114: {fileID: 677634531}
-  m_Layer: 0
-  m_Name: sphere
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!114 &677634526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb521e9ace49d8546a83f420a0debd12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_strFileName: ed_1024_512kb.mp4
+  m_strFileName: 
   m_TargetMaterial:
   - {fileID: 677634525}
   m_bFullScreen: 0
@@ -206,75 +190,6 @@ MonoBehaviour:
   m_bLoop: 0
   m_bAutoPlay: 1
   m_bInit: 0
---- !u!95 &677634527
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 1d50cc230c341074994f76337d1af082,
-    type: 3}
-  m_PrefabInternal: {fileID: 2019121634}
-  m_GameObject: {fileID: 677634525}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 1d50cc230c341074994f76337d1af082, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!23 &677634528
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300000, guid: 1d50cc230c341074994f76337d1af082,
-    type: 3}
-  m_PrefabInternal: {fileID: 2019121634}
-  m_GameObject: {fileID: 677634525}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 6f748ae57c6c13a4a935ce652be32129, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!33 &677634529
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3300000, guid: 1d50cc230c341074994f76337d1af082,
-    type: 3}
-  m_PrefabInternal: {fileID: 2019121634}
-  m_GameObject: {fileID: 677634525}
-  m_Mesh: {fileID: 4300000, guid: 1d50cc230c341074994f76337d1af082, type: 3}
---- !u!4 &677634530
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400000, guid: 1d50cc230c341074994f76337d1af082, type: 3}
-  m_PrefabInternal: {fileID: 2019121634}
-  m_GameObject: {fileID: 677634525}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 100}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
 --- !u!114 &677634531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -897,7 +812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _videoLoader: {fileID: 677634531}
-  _toVideo: 6d69675f65676974696d5f76696432622e6d7034
+  _toVideo: t17.mp4
   _questionID: 1
   _answerID: 1
 --- !u!1 &1749341529
@@ -1035,7 +950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _videoLoader: {fileID: 677634531}
-  _toVideo: 6d69675f65676974696d5f76696432632e6d7034
+  _toVideo: Dubai Grand Parade 2014 final 10GB 4096x2048 1920x960 new patch 30.75_360.mp4
   _questionID: 1
   _answerID: 2
 --- !u!1001 &2019121634
@@ -1091,5 +1006,4 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1d50cc230c341074994f76337d1af082, type: 3}
-  m_RootGameObject: {fileID: 677634525}
   m_IsPrefabParent: 0
