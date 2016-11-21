@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb521e9ace49d8546a83f420a0debd12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_strFileName: https://s3.amazonaws.com/360degreemea/Dubai+Grand+Parade+2014+final+10GB+4096x2048+1920x960+new+patch+30.75.mp4
+  m_strFileName: EasyMovieTexture.mp4
   m_TargetMaterial:
   - {fileID: 677634525}
   m_bFullScreen: 0

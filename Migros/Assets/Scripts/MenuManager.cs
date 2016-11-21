@@ -127,10 +127,10 @@ public class MenuManager : MonoBehaviour {
 
     public void DisableUI()
     {
-        for (int i = 0; i < videos.Length; i++)
+        for (int i = 0; i < menuButton.Length; i++)
         {
-            videos[i].GetComponent<MeshRenderer>().enabled = false;
-            videos[i].GetComponent<MeshCollider>().enabled = false;
+            menuButton[i].GetComponent<MeshRenderer>().enabled = false;
+            menuButton[i].GetComponent<MeshCollider>().enabled = false;
         }
     }
 }

@@ -10,11 +10,7 @@ public class PlayButton : MonoBehaviour
 {
     public event Action<PlayButton> OnButtonSelected;                   // This event is triggered when the selection of the button has finished.
 
-
     [SerializeField]
-    private string m_SceneToLoad;                      // The name of the scene to load.
-    [SerializeField]
-   // private ScreenFadeOut m_CameraFadeOut;
     private VRCameraFade m_CameraFade;                 // This fades the scene out when a new scene is about to be loaded.
     [SerializeField] 
     private SelectionRadial m_SelectionRadial;         // This controls when the selection is complete.
@@ -23,9 +19,8 @@ public class PlayButton : MonoBehaviour
      
 
   //  private AudioSource audio;
-    public MediaPlayerCtrl videoPlayer;
+    public VideoLoader videoLoader;
     public GameObject sceneToActivate;
-    public GameObject sceneToDisable;
     [SerializeField]private Image fadePanel;
 
     public Downloader downloader;
@@ -37,7 +32,7 @@ public class PlayButton : MonoBehaviour
 
     public void Start()
     {
-        downloader.downloadFinished = true;
+       // downloader.downloadFinished = true;
        // videoPlayer = GameObject.Find("sphere").GetComponent<MediaPlayerCtrl>();
        // cameraToActivate = GameObject.FindGameObjectWithTag("VideoCamera").GetComponent<Camera>();
        // cameraToDisable = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
@@ -51,12 +46,7 @@ public class PlayButton : MonoBehaviour
     {
         m_SelectionRadial = GameObject.Find("MainCamera").GetComponent<SelectionRadial>();
         //  m_CameraFadeOut = GameObject.Find("MainCamera").GetComponent<ScreenFadeOut>();
-        if(buttonActivated)
-            videoPlayer.m_strFileName = /*"file:///" +*/  downloader.downloader.downloadDirectory + "/" + videoName + ".mp4";
-
-       // Debug.Log("Download directory: " + videoPlayer.m_strFileName);
-        
-        
+         
     }
 
     private void OnEnable()
@@ -64,9 +54,7 @@ public class PlayButton : MonoBehaviour
         m_InteractiveItem.OnOver += HandleOver;
         m_InteractiveItem.OnOut += HandleOut;
         m_SelectionRadial.OnSelectionComplete += HandleSelectionComplete;
-        
-        Debug.Log("Enabled");
-        text.text = "file:///" + downloader.downloader.downloadDirectory + "/" + videoName + ".mp4";
+        StartCoroutine(ActivateButton()); //Temporary
     }
 
 
@@ -75,8 +63,6 @@ public class PlayButton : MonoBehaviour
         m_InteractiveItem.OnOver -= HandleOver;
         m_InteractiveItem.OnOut -= HandleOut;
         m_SelectionRadial.OnSelectionComplete -= HandleSelectionComplete;
-        
-        Debug.Log("Disabled");
     }
 
 
@@ -101,10 +87,9 @@ public class PlayButton : MonoBehaviour
     private void HandleSelectionComplete()
     {
         // If the user is looking at the rendering of the scene when the radial's selection finishes, activate the button.
-        if (m_GazeOver)
-            StartCoroutine(ActivateButton());
+       /* if (m_GazeOver)
+            StartCoroutine(ActivateButton());*/
     }
-
 
     private IEnumerator ActivateButton()
     {
@@ -115,15 +100,15 @@ public class PlayButton : MonoBehaviour
         // If anything is subscribed to the OnButtonSelected event, call it.
         if (OnButtonSelected != null)
             OnButtonSelected(this);
+        videoLoader._currentVideo = "file:///" + Application.persistentDataPath + "/" + videoName + ".mp4";
+        PlayerPrefs.SetString("video", videoLoader._currentVideo);
 
         // Wait for the camera to fade out.
         yield return StartCoroutine(m_CameraFade.BeginFadeOut(true));
 
         m_CameraFade.enabled = false;
         sceneToActivate.SetActive(true);
-        sceneToDisable.SetActive(false);
-       // GetComponent<AudioSource>().mute = true;
-        videoPlayer.enabled = true;
+   
         fadePanel.color = Color.clear;
         buttonActivated = true;
 
