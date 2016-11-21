@@ -16,6 +16,8 @@ public class VideoLoader : MonoBehaviour {
 	public string _nextVideo;
 
 
+
+
 	// Use this for initialization
 	void Start () {
 	
@@ -31,6 +33,12 @@ public class VideoLoader : MonoBehaviour {
 		
 		}
 
+		if (Input.GetKeyUp (KeyCode.P)) {
+
+			VideoPause ();
+
+		}
+
 	}
 
 	public void VideoLoad(){
@@ -41,6 +49,13 @@ public class VideoLoader : MonoBehaviour {
 		_videoPlayer.Play ();
 	
 		Debug.Log ("new video loaded");
+	}
+
+	public void VideoPause(){
+	
+		Debug.Log (_videoPlayer.GetSeekPosition ());
+		_videoPlayer.Pause ();
+	
 	}
 
 }
