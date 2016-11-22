@@ -142,11 +142,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _videoLoader: {fileID: 677634531}
   _toVideo: {fileID: 1013394476}
-  _questionID: 1
+  videoToDisable: {fileID: 719110025}
+  _questionID: 3
   _answerID: 1
-  _targeter: {fileID: 0}
+  _targeter: {fileID: 1920988608}
   _button: {fileID: 37389938}
-  _eventSystem: {fileID: 0}
+  _eventSystem: {fileID: 1386592992}
 --- !u!65 &37389937
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -780,11 +781,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _videoLoader: {fileID: 677634531}
   _toVideo: {fileID: 2090734117}
-  _questionID: 1
+  videoToDisable: {fileID: 1432383129}
+  _questionID: 2
   _answerID: 1
-  _targeter: {fileID: 0}
+  _targeter: {fileID: 1920988608}
   _button: {fileID: 162841820}
-  _eventSystem: {fileID: 0}
+  _eventSystem: {fileID: 1386592992}
 --- !u!65 &162841819
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1061,6 +1063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QAGameobjectToEnable: {fileID: 952379086}
+  QAGameobjectToDisable: {fileID: 120290658}
   _loader: {fileID: 677634531}
 --- !u!114 &300476277
 MonoBehaviour:
@@ -1352,6 +1355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _videoLoader: {fileID: 677634531}
   _toVideo: {fileID: 1432383129}
+  videoToDisable: {fileID: 941981723}
   _questionID: 1
   _answerID: 1
   _targeter: {fileID: 1920988608}
@@ -1640,6 +1644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QAGameobjectToEnable: {fileID: 1852279307}
+  QAGameobjectToDisable: {fileID: 952379086}
   _loader: {fileID: 677634531}
 --- !u!114 &719110029
 MonoBehaviour:
@@ -1830,6 +1835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QAGameobjectToEnable: {fileID: 952379086}
+  QAGameobjectToDisable: {fileID: 0}
   _loader: {fileID: 677634531}
 --- !u!114 &941981728
 MonoBehaviour:
@@ -2088,6 +2094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QAGameobjectToEnable: {fileID: 952379086}
+  QAGameobjectToDisable: {fileID: 1852279307}
   _loader: {fileID: 677634531}
 --- !u!114 &1013394480
 MonoBehaviour:
@@ -2175,6 +2182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QAGameobjectToEnable: {fileID: 952379086}
+  QAGameobjectToDisable: {fileID: 1852279307}
   _loader: {fileID: 677634531}
 --- !u!114 &1054535703
 MonoBehaviour:
@@ -2350,6 +2358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _videoLoader: {fileID: 677634531}
   _toVideo: {fileID: 719110025}
+  videoToDisable: {fileID: 941981723}
   _questionID: 1
   _answerID: 2
   _targeter: {fileID: 1920988608}
@@ -2718,11 +2727,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _videoLoader: {fileID: 677634531}
   _toVideo: {fileID: 300476273}
-  _questionID: 1
+  videoToDisable: {fileID: 1432383129}
+  _questionID: 2
   _answerID: 2
-  _targeter: {fileID: 0}
+  _targeter: {fileID: 1920988608}
   _button: {fileID: 1292654776}
-  _eventSystem: {fileID: 0}
+  _eventSystem: {fileID: 1386592992}
 --- !u!65 &1292654775
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2916,6 +2926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QAGameobjectToEnable: {fileID: 120290658}
+  QAGameobjectToDisable: {fileID: 952379086}
   _loader: {fileID: 677634531}
 --- !u!114 &1432383132
 MonoBehaviour:
@@ -3738,11 +3749,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _videoLoader: {fileID: 677634531}
   _toVideo: {fileID: 1054535700}
-  _questionID: 1
+  videoToDisable: {fileID: 719110025}
+  _questionID: 3
   _answerID: 2
-  _targeter: {fileID: 0}
+  _targeter: {fileID: 1920988608}
   _button: {fileID: 2077145978}
-  _eventSystem: {fileID: 0}
+  _eventSystem: {fileID: 1386592992}
 --- !u!65 &2077145977
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3907,6 +3919,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QAGameobjectToEnable: {fileID: 952379086}
+  QAGameobjectToDisable: {fileID: 120290658}
   _loader: {fileID: 677634531}
 --- !u!114 &2090734121
 MonoBehaviour:
