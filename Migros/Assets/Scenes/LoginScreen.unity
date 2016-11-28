@@ -37,12 +37,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44578427, g: 0.4954753, b: 0.5743086, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 7
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -50,8 +50,8 @@ LightmapSettings:
     m_AlbedoBoost: 1
     m_TemporalCoherenceThreshold: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 1
-    m_EnableRealtimeLightmaps: 1
+    m_EnableBakedLightmaps: 0
+    m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 4
     m_Resolution: 2
@@ -228,7 +228,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 1
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -570,7 +570,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400062, guid: a02d876393615904280be0c509017785, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.36
+      value: -4.85
       objectReference: {fileID: 0}
     - target: {fileID: 400062, guid: a02d876393615904280be0c509017785, type: 3}
       propertyPath: m_LocalPosition.z
@@ -615,6 +615,10 @@ Prefab:
     - target: {fileID: 400062, guid: a02d876393615904280be0c509017785, type: 3}
       propertyPath: m_LocalScale.z
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100062, guid: a02d876393615904280be0c509017785, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a02d876393615904280be0c509017785, type: 3}
@@ -1293,18 +1297,18 @@ Light:
   serializedVersion: 7
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.5
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 0
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_Strength: 1
+    m_Bias: 0
+    m_NormalBias: 0.55
+    m_NearPlane: 0.1
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
@@ -1312,7 +1316,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1.1
   m_ShadowRadius: 0
@@ -1323,10 +1327,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1050408302}
-  m_LocalRotation: {x: -0.18236002, y: 0.2500174, z: -0.20209078, w: -0.9291908}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.39428186, y: -0.23298243, z: 0.3022497, w: 0.8360061}
+  m_LocalPosition: {x: 0, y: 28.1, z: -54.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 26.075, y: 334.339, z: 18.161001}
+  m_LocalEulerAnglesHint: {x: 53.129, y: -14.292001, z: -687.46}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -1441,7 +1445,7 @@ ParticleSystem:
   moveWithTransform: 1
   autoRandomSeed: 1
   scalingMode: 1
-  randomSeed: 1875235037
+  randomSeed: -1109900745
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -3217,6 +3221,10 @@ Prefab:
       propertyPath: m_Name
       value: migrosLogo3D
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c9e6702d69b71764a80574c3277d2876, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9e6702d69b71764a80574c3277d2876, type: 3}
   m_IsPrefabParent: 0
@@ -3547,7 +3555,7 @@ MeshRenderer:
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
+  m_IgnoreNormalsForChartDetection: 1
   m_ImportantGI: 0
   m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
@@ -3583,7 +3591,7 @@ Transform:
   m_GameObject: {fileID: 1967951894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.92, y: -5.87, z: -8.72}
-  m_LocalScale: {x: 200, y: 1, z: 200}
+  m_LocalScale: {x: 25, y: 1, z: 25}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
