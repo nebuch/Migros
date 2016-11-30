@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: ecfbc6fd74110df4fa9f54a57e300d5c
+timeCreated: 1480428384
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - CentraleSans
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: bf19ca506f0deac4e836a6d74f0226aa, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
