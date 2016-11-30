@@ -479,7 +479,7 @@ MonoBehaviour:
     settings:
       debugPass: 0
       quality: 2
-      edgeDetectionMethod: 2
+      edgeDetectionMethod: 1
     quality:
       diagonalDetection: 1
       cornerDetection: 1
@@ -490,7 +490,7 @@ MonoBehaviour:
       cornerRounding: 25
       localContrastAdaptationFactor: 2
     predication:
-      enabled: 0
+      enabled: 1
       threshold: 0.01
       scale: 2
       strength: 0.4
@@ -1879,13 +1879,13 @@ Light:
   serializedVersion: 7
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.76
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: -1
+    m_Resolution: 3
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.2
