@@ -10,7 +10,7 @@ public class InputCast : Singleton<InputCast>
 
 	private void OnGUI()
 	{
-		GUI.Box (new Rect((Screen.width / 2) - 5, (Screen.height / 2) - 5, 10, 10), string.Empty);
+		//GUI.Box (new Rect((Screen.width / 2) - 5, (Screen.height / 2) - 5, 10, 10), string.Empty);
 	}
 
 	private void Update()
