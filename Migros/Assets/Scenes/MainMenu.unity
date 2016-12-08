@@ -430,6 +430,10 @@ Prefab:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 2100000, guid: 51d551e15c38caa47912f74778ee3c69, type: 2}
+    - target: {fileID: 172770, guid: ad9d8e2e1e1e6774bab6f142ed0c6f51, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad9d8e2e1e1e6774bab6f142ed0c6f51, type: 2}
   m_IsPrefabParent: 0
@@ -1015,7 +1019,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &300476274
 Transform:
   m_ObjectHideFlags: 0
@@ -1596,7 +1600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &719110026
 Transform:
   m_ObjectHideFlags: 0
@@ -1775,7 +1779,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &941981724
 Transform:
   m_ObjectHideFlags: 0
@@ -2046,7 +2050,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1013394477
 Transform:
   m_ObjectHideFlags: 0
@@ -2148,7 +2152,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1054535701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2826,7 +2830,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1432383130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3022,8 +3026,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 104168, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
       propertyPath: m_Name
-      value: MainCamera (1)
+      value: MainCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 11451356, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
+      propertyPath: m_ScreenFadeIn
+      value: 
+      objectReference: {fileID: 1478055481}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
   m_IsPrefabParent: 0
@@ -3349,6 +3357,12 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1478055481 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11456534, guid: ccf8c8cc05aad7b40a8deb4f73296da4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1478055470}
+  m_Script: {fileID: 11500000, guid: 31957ab02a8654b448736febf48c16e9, type: 3}
 --- !u!114 &1478055483 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11458036, guid: ccf8c8cc05aad7b40a8deb4f73296da4,
@@ -4200,7 +4214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2090734118
 Transform:
   m_ObjectHideFlags: 0
