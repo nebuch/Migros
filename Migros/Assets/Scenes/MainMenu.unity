@@ -401,15 +401,15 @@ Prefab:
     - target: {fileID: 11420560, guid: ad9d8e2e1e1e6774bab6f142ed0c6f51, type: 2}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1493599650}
     - target: {fileID: 11420560, guid: ad9d8e2e1e1e6774bab6f142ed0c6f51, type: 2}
       propertyPath: m_Reticle
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1493599641}
     - target: {fileID: 11420560, guid: ad9d8e2e1e1e6774bab6f142ed0c6f51, type: 2}
       propertyPath: m_VRInput
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1493599644}
     - target: {fileID: 11420560, guid: ad9d8e2e1e1e6774bab6f142ed0c6f51, type: 2}
       propertyPath: m_BackgroundImage
       value: 
@@ -430,10 +430,6 @@ Prefab:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 2100000, guid: 51d551e15c38caa47912f74778ee3c69, type: 2}
-    - target: {fileID: 172770, guid: ad9d8e2e1e1e6774bab6f142ed0c6f51, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad9d8e2e1e1e6774bab6f142ed0c6f51, type: 2}
   m_IsPrefabParent: 0
@@ -997,7 +993,7 @@ Transform:
   - {fileID: 1941957607}
   - {fileID: 1182027539}
   - {fileID: 778875895}
-  - {fileID: 1478055471}
+  - {fileID: 1493599650}
   m_Father: {fileID: 0}
   m_RootOrder: 1
 --- !u!1 &300476273
@@ -1019,7 +1015,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &300476274
 Transform:
   m_ObjectHideFlags: 0
@@ -1045,12 +1041,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde41b6ea96d9e241a053518940313fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CameraFade: {fileID: 0}
-  m_SelectionRadial: {fileID: 0}
+  m_CameraFade: {fileID: 1182274838}
+  m_SelectionRadial: {fileID: 1493599642}
   m_InteractiveItem: {fileID: 1239721909}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
-  fadePanel: {fileID: 0}
+  fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: t17
   buttonActivated: 0
@@ -1600,7 +1596,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &719110026
 Transform:
   m_ObjectHideFlags: 0
@@ -1626,12 +1622,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde41b6ea96d9e241a053518940313fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CameraFade: {fileID: 0}
-  m_SelectionRadial: {fileID: 0}
+  m_CameraFade: {fileID: 1182274838}
+  m_SelectionRadial: {fileID: 1493599642}
   m_InteractiveItem: {fileID: 1239721909}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
-  fadePanel: {fileID: 0}
+  fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: mig_egitim_vid2b
   buttonActivated: 0
@@ -1779,7 +1775,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &941981724
 Transform:
   m_ObjectHideFlags: 0
@@ -1852,12 +1848,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde41b6ea96d9e241a053518940313fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CameraFade: {fileID: 0}
-  m_SelectionRadial: {fileID: 0}
+  m_CameraFade: {fileID: 1182274838}
+  m_SelectionRadial: {fileID: 1493599642}
   m_InteractiveItem: {fileID: 1239721909}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
-  fadePanel: {fileID: 0}
+  fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: EasyMovieTexture
   buttonActivated: 0
@@ -2050,7 +2046,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1013394477
 Transform:
   m_ObjectHideFlags: 0
@@ -2076,12 +2072,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde41b6ea96d9e241a053518940313fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CameraFade: {fileID: 0}
-  m_SelectionRadial: {fileID: 0}
+  m_CameraFade: {fileID: 1182274838}
+  m_SelectionRadial: {fileID: 1493599642}
   m_InteractiveItem: {fileID: 1239721909}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
-  fadePanel: {fileID: 0}
+  fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: Dubai Grand Parade 2014 final 10GB 4096x2048 1920x960 new patch 30.75_360
   buttonActivated: 0
@@ -2152,7 +2148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1054535701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2164,12 +2160,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde41b6ea96d9e241a053518940313fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CameraFade: {fileID: 0}
-  m_SelectionRadial: {fileID: 0}
+  m_CameraFade: {fileID: 1182274838}
+  m_SelectionRadial: {fileID: 1493599642}
   m_InteractiveItem: {fileID: 1239721909}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
-  fadePanel: {fileID: 0}
+  fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: EasyMovieTexture
   buttonActivated: 0
@@ -2494,6 +2490,72 @@ Transform:
   - {fileID: 712889876}
   m_Father: {fileID: 285814951}
   m_RootOrder: 1
+--- !u!1001 &1182274836
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 285814951}
+    m_Modifications:
+    - target: {fileID: 492384, guid: 140cb28123f778d4795e5766bd260dbb, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -381.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 492384, guid: 140cb28123f778d4795e5766bd260dbb, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 9.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 492384, guid: 140cb28123f778d4795e5766bd260dbb, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 492384, guid: 140cb28123f778d4795e5766bd260dbb, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492384, guid: 140cb28123f778d4795e5766bd260dbb, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492384, guid: 140cb28123f778d4795e5766bd260dbb, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492384, guid: 140cb28123f778d4795e5766bd260dbb, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 492384, guid: 140cb28123f778d4795e5766bd260dbb, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 168970, guid: 140cb28123f778d4795e5766bd260dbb, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11418856, guid: 140cb28123f778d4795e5766bd260dbb, type: 2}
+      propertyPath: sceneToActivate
+      value: 
+      objectReference: {fileID: 815698834}
+    - target: {fileID: 11418856, guid: 140cb28123f778d4795e5766bd260dbb, type: 2}
+      propertyPath: sceneToDisable
+      value: 
+      objectReference: {fileID: 285814950}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 140cb28123f778d4795e5766bd260dbb, type: 2}
+  m_IsPrefabParent: 0
+--- !u!114 &1182274837 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11458718, guid: 140cb28123f778d4795e5766bd260dbb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1182274836}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!114 &1182274838 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11406742, guid: 140cb28123f778d4795e5766bd260dbb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1182274836}
+  m_Script: {fileID: 11500000, guid: 31957ab02a8654b448736febf48c16e9, type: 3}
 --- !u!4 &1207963379
 Transform:
   m_ObjectHideFlags: 0
@@ -2556,7 +2618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0742577183eb7964686ad45f844edd4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SelectionRadial: {fileID: 1478055483}
+  m_SelectionRadial: {fileID: 1493599642}
   m_InteractiveItem: {fileID: 1239721909}
   manager: {fileID: 550080877}
   videoInfo: {fileID: 941981723}
@@ -2830,7 +2892,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1432383130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2842,12 +2904,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde41b6ea96d9e241a053518940313fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CameraFade: {fileID: 0}
-  m_SelectionRadial: {fileID: 0}
+  m_CameraFade: {fileID: 1182274838}
+  m_SelectionRadial: {fileID: 1493599642}
   m_InteractiveItem: {fileID: 1239721909}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
-  fadePanel: {fileID: 0}
+  fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: ed_1024_512kb
   buttonActivated: 0
@@ -2913,462 +2975,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1207963379}
   m_RootOrder: 1
---- !u!1001 &1478055470
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 285814951}
-    m_Modifications:
-    - target: {fileID: 493278, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -381.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 493278, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 9.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 493278, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 6.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 493278, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 493278, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 493278, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 493278, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 493278, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2061482, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: m_ClearFlags
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2061482, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: m_BackGroundColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2061482, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: m_BackGroundColor.g
-      value: 0.40415227
-      objectReference: {fileID: 0}
-    - target: {fileID: 2061482, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: m_BackGroundColor.b
-      value: 0.07352942
-      objectReference: {fileID: 0}
-    - target: {fileID: 2061482, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: m_BackGroundColor.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2061482, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: near clip plane
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2061482, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: m_HDR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11404258, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: m_Color.g
-      value: 0.64137924
-      objectReference: {fileID: 0}
-    - target: {fileID: 11404258, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11404258, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11491538, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: m_Color.g
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 11491538, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11491538, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11424812, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: m_Color.g
-      value: 0.26896554
-      objectReference: {fileID: 0}
-    - target: {fileID: 11424812, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11424812, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11424812, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 22499398, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 104168, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: m_Name
-      value: MainCamera
-      objectReference: {fileID: 0}
-    - target: {fileID: 11451356, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-      propertyPath: m_ScreenFadeIn
-      value: 
-      objectReference: {fileID: 1478055481}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &1478055471 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 493278, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-  m_PrefabInternal: {fileID: 1478055470}
---- !u!1 &1478055472 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 104168, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
-  m_PrefabInternal: {fileID: 1478055470}
---- !u!114 &1478055473
+--- !u!114 &1493599641 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1478055472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fd999d1b2cf94a45a5b0a47ce074bef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  redChannel:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  greenChannel:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  blueChannel:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  useDepthCorrection: 0
-  zCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  depthRedChannel:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  depthGreenChannel:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  depthBlueChannel:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  saturation: 1
-  selectiveCc: 0
-  selectiveFromColor: {r: 1, g: 1, b: 1, a: 1}
-  selectiveToColor: {r: 1, g: 1, b: 1, a: 1}
-  mode: 0
-  updateTextures: 1
-  colorCorrectionCurvesShader: {fileID: 4800000, guid: 62bcade1028c24ca1a39760ed84b9487,
-    type: 3}
-  simpleColorCorrectionCurvesShader: {fileID: 4800000, guid: 438ddd58d82c84d9eb1fdc56111702e1,
-    type: 3}
-  colorCorrectionSelectiveShader: {fileID: 4800000, guid: e515e0f94cefc4c0db54b45cba621544,
-    type: 3}
---- !u!114 &1478055474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1478055472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1ea2772e7ca21f4bb357f710c616ed5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1478055475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1478055472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66fb05cd94e844b48bc192e96bbfcd37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  axes: 0
-  sensitivityX: 3
-  sensitivityY: 3
-  oyuncu: {fileID: 0}
-  minimumX: -360
-  maximumX: 360
-  minimumY: -60
-  maximumY: 60
-  smoothLookX: 0
-  sensivityXmemory: 0
-  maximumXmemory: 0
-  minimumXmemory: 0
-  maximumYmemory: 0
-  minimumYmemory: 0
---- !u!114 &1478055476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1478055472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdc35e0180670ab4e8d2f9439137791f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SMAA:
-    settings:
-      debugPass: 0
-      quality: 2
-      edgeDetectionMethod: 1
-    quality:
-      diagonalDetection: 1
-      cornerDetection: 1
-      threshold: 0.1
-      depthThreshold: 0.01
-      maxSearchSteps: 16
-      maxDiagonalSearchSteps: 8
-      cornerRounding: 25
-      localContrastAdaptationFactor: 2
-    predication:
-      enabled: 1
-      threshold: 0.01
-      scale: 2
-      strength: 0.4
-    temporal:
-      enabled: 0
-      fuzzSize: 2
-  m_FXAA:
-    preset:
-      qualitySettings:
-        subpixelAliasingRemovalAmount: 0.75
-        edgeDetectionThreshold: 0.166
-        minimumRequiredLuminance: 0.0833
-      consoleSettings:
-        subpixelSpreadAmount: 0.5
-        edgeSharpnessAmount: 8
-        edgeDetectionThreshold: 0.125
-        minimumRequiredLuminance: 0.05
-  m_Method: 0
---- !u!114 &1478055477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1478055472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd6d4281e5d7cd44d8c6e38bc2c1b8d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 0
-  intensity: 0.1
-  chromaticAberration: 1
-  axialAberration: 0.5
-  blur: 0.1
-  blurSpread: 1
-  luminanceDependency: 0.25
-  blurDistance: 2.5
-  vignetteShader: {fileID: 4800000, guid: 627943dc7a9a74286b70a4f694a0acd5, type: 3}
-  separableBlurShader: {fileID: 4800000, guid: e97c14fbb5ea04c3a902cc533d7fc5d1, type: 3}
-  chromAberrationShader: {fileID: 4800000, guid: 2b4f29398d9484ccfa9fd220449f5eee,
-    type: 3}
---- !u!82 &1478055478
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1478055472}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 97c39b084b0b0da4690b069059c35a90, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
---- !u!114 &1478055481 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11456534, guid: ccf8c8cc05aad7b40a8deb4f73296da4,
+  m_PrefabParentObject: {fileID: 11412002, guid: 140cb28123f778d4795e5766bd260dbb,
     type: 2}
-  m_PrefabInternal: {fileID: 1478055470}
-  m_Script: {fileID: 11500000, guid: 31957ab02a8654b448736febf48c16e9, type: 3}
---- !u!114 &1478055483 stripped
+  m_PrefabInternal: {fileID: 1182274836}
+  m_Script: {fileID: 11500000, guid: aff17147c9606014f8e8f74f255d466a, type: 3}
+--- !u!114 &1493599642 stripped
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11458036, guid: ccf8c8cc05aad7b40a8deb4f73296da4,
+  m_PrefabParentObject: {fileID: 11485032, guid: 140cb28123f778d4795e5766bd260dbb,
     type: 2}
-  m_PrefabInternal: {fileID: 1478055470}
+  m_PrefabInternal: {fileID: 1182274836}
   m_Script: {fileID: 11500000, guid: 03fb8390bc96a7f4cafebf5efc362f62, type: 3}
+--- !u!114 &1493599644 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11422550, guid: 140cb28123f778d4795e5766bd260dbb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1182274836}
+  m_Script: {fileID: 11500000, guid: 8902ef04f323e444b98d2e4fd80a56ab, type: 3}
+--- !u!4 &1493599650 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 492384, guid: 140cb28123f778d4795e5766bd260dbb, type: 2}
+  m_PrefabInternal: {fileID: 1182274836}
 --- !u!1 &1804180589
 GameObject:
   m_ObjectHideFlags: 0
@@ -4040,6 +3668,35 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1d50cc230c341074994f76337d1af082, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &2047639988 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 168970, guid: 140cb28123f778d4795e5766bd260dbb, type: 2}
+  m_PrefabInternal: {fileID: 1182274836}
+--- !u!114 &2047639996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2047639988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66fb05cd94e844b48bc192e96bbfcd37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axes: 0
+  sensitivityX: 15
+  sensitivityY: 15
+  oyuncu: {fileID: 0}
+  minimumX: -360
+  maximumX: 360
+  minimumY: -60
+  maximumY: 60
+  smoothLookX: 0
+  sensivityXmemory: 0
+  maximumXmemory: 0
+  minimumXmemory: 0
+  maximumYmemory: 0
+  minimumYmemory: 0
 --- !u!1 &2077145974
 GameObject:
   m_ObjectHideFlags: 0
@@ -4214,7 +3871,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2090734118
 Transform:
   m_ObjectHideFlags: 0
@@ -4240,12 +3897,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde41b6ea96d9e241a053518940313fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CameraFade: {fileID: 0}
-  m_SelectionRadial: {fileID: 0}
+  m_CameraFade: {fileID: 1182274838}
+  m_SelectionRadial: {fileID: 1493599642}
   m_InteractiveItem: {fileID: 1239721909}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
-  fadePanel: {fileID: 0}
+  fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: mig_egitim_vid2c
   buttonActivated: 0
