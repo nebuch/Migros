@@ -42,6 +42,9 @@ public class UserInput : Singleton<UserInput>
 			return;
 		}
 
-		Debug.Log ("devam");
+
+		PlayerPrefs.SetString ("userID", _text.text);
+		Debug.Log (PlayerPrefs.GetString("userID"));
+		Application.LoadLevel("MainMenu");
 	}
 }

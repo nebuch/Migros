@@ -14,7 +14,7 @@ public class AnswerSystem : MonoBehaviour {
 	public int _questionID;
 	public int _answerID;
 	private int _packID;
-	private int _userID;
+	private string _userID;
 
 	[Header ("Player")]
 
@@ -24,7 +24,7 @@ public class AnswerSystem : MonoBehaviour {
 	private bool _selected;
 
 	void Start () {
-	
+		_userID = PlayerPrefs.GetString ("userID");
 	}
 	
 	// Update is called once per frame
