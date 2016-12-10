@@ -1,6 +1,8 @@
 using System.Collections;
 using UnityEngine;
+#if UNITY_5_5
 using UnityEngine.AI;
+#endif
 
 namespace VRStandardAssets.Maze
 {

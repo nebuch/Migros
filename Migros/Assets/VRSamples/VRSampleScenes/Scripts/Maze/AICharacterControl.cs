@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
-using UnityEngine.AI;
 using VRStandardAssets.Maze;
-
+#if UNITY_5_5
+using UnityEngine.AI;
+#endif
 namespace VRStandardAssets.Maze
 {
     [RequireComponent(typeof(NavMeshAgent))]
