@@ -30,7 +30,7 @@ namespace MonoLightTech.UnityUtil
             if (_instance == null)
             {
                 _instance = this as T;
-                DontDestroyOnLoad(gameObject);
+             //   DontDestroyOnLoad(gameObject);
             }
             else
                 Destroy(gameObject);
