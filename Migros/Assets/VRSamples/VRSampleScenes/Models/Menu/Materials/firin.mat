@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: MenuParticleCrosshair
+  m_Name: firin
   m_Shader: {fileID: 4800000, guid: 74b8904a16e1ee64aae235f4c1f213cc, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
@@ -72,7 +72,7 @@ Material:
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 2800000, guid: e11d5dfc15947134cb19c9ecac38f847, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5688d9f885a446a4883a668a0e2bdcd4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
