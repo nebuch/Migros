@@ -45,7 +45,12 @@ public class AnswerSystem : MonoBehaviour {
 
         _toVideo.SetActive(true);
         videoToDisable.SetActive(false);
-	    _videoLoader._nextVideo ="file:///" + Application.persistentDataPath + "/" + _toVideo.GetComponent<PlayButton>().videoName + ".mp4";
+#if UNITY_EDITOR
+        _videoLoader._nextVideo = _toVideo.GetComponent<PlayButton>().videoName + ".mp4";
+#endif
+#if UNITY_ANDROID && !UNITY_EDITOR
+        _videoLoader._nextVideo ="file:///" + Application.persistentDataPath + "/" + _toVideo.GetComponent<PlayButton>().videoName + ".mp4";
+#endif
         _videoLoader.VideoLoad();
         PlayerPrefs.SetString (string.Format ("{0}: {1:0}_ {2:0}: {3:0}_ {4:0}: {5:0}_ {6:0}: {7:0}", "user", _userID, "pack", _packID, "question", _questionID, "answer", _answerID), "Answer Given");
 
