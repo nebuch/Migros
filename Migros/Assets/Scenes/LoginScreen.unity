@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44578427, g: 0.4954753, b: 0.5743086, a: 1}
+  m_IndirectSpecularColor: {r: 0.4457845, g: 0.4954756, b: 0.57430893, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -186,6 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 68
   action: 0
+  _cameraFade: {fileID: 335404331}
 --- !u!114 &13692768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,6 +297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 66
   action: 0
+  _cameraFade: {fileID: 335404331}
 --- !u!114 &126064000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -499,6 +501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 54
   action: 0
+  _cameraFade: {fileID: 335404331}
 --- !u!114 &323835011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -819,7 +822,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -831,6 +834,12 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &335404331 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11456534, guid: ccf8c8cc05aad7b40a8deb4f73296da4,
+    type: 2}
+  m_PrefabInternal: {fileID: 535778409}
+  m_Script: {fileID: 11500000, guid: 31957ab02a8654b448736febf48c16e9, type: 3}
 --- !u!1001 &339797277
 Prefab:
   m_ObjectHideFlags: 0
@@ -1044,6 +1053,26 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11447348, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11447348, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22407974, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 22499000, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 3.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 22499000, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 2.32
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
   m_IsPrefabParent: 0
@@ -1143,6 +1172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 52
   action: 0
+  _cameraFade: {fileID: 335404331}
 --- !u!114 &738534821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1327,6 +1357,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 65
   action: 0
+  _cameraFade: {fileID: 335404331}
 --- !u!114 &773642298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1437,6 +1468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 49
   action: 0
+  _cameraFade: {fileID: 335404331}
 --- !u!114 &805807867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1605,6 +1637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 51
   action: 0
+  _cameraFade: {fileID: 335404331}
 --- !u!114 &860033299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1715,6 +1748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 0
   action: 2
+  _cameraFade: {fileID: 335404331}
 --- !u!114 &917389548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1825,6 +1859,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 0
   action: 1
+  _cameraFade: {fileID: 335404331}
 --- !u!114 &1004825367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1935,6 +1970,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 70
   action: 0
+  _cameraFade: {fileID: 335404331}
 --- !u!114 &1009266300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2045,6 +2081,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 56
   action: 0
+  _cameraFade: {fileID: 335404331}
 --- !u!114 &1028924943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4212,6 +4249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 48
   action: 0
+  _cameraFade: {fileID: 335404331}
 --- !u!114 &1598904777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4388,6 +4426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 50
   action: 0
+  _cameraFade: {fileID: 335404331}
 --- !u!114 &1790047275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4498,6 +4537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 69
   action: 0
+  _cameraFade: {fileID: 335404331}
 --- !u!114 &1806193611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4746,6 +4786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 67
   action: 0
+  _cameraFade: {fileID: 335404331}
 --- !u!114 &2049265628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4856,6 +4897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 57
   action: 0
+  _cameraFade: {fileID: 335404331}
 --- !u!114 &2084957955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5028,6 +5070,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 55
   action: 0
+  _cameraFade: {fileID: 335404331}
 --- !u!114 &2133335031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5138,6 +5181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 53
   action: 0
+  _cameraFade: {fileID: 335404331}
 --- !u!114 &2145656478
 MonoBehaviour:
   m_ObjectHideFlags: 0

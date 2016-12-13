@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using MonoLightTech.UnityUtil;
+using UnityEngine.SceneManagement;
 
 public class UserInput : Singleton<UserInput>
 {
@@ -45,6 +46,6 @@ public class UserInput : Singleton<UserInput>
 
 		PlayerPrefs.SetString ("userID", _text.text);
 		Debug.Log (PlayerPrefs.GetString("userID"));
-		Application.LoadLevel("MainMenu");
+		SceneManager.LoadScene("MainMenu");
 	}
 }
