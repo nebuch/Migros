@@ -1213,6 +1213,7 @@ MonoBehaviour:
   m_InteractiveItem: {fileID: 188509163}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
+  sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: mig_egitim_vid2b
@@ -1351,6 +1352,7 @@ MonoBehaviour:
   m_InteractiveItem: {fileID: 1239721909}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
+  sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: mig_egitim_vid2b
@@ -1454,6 +1456,7 @@ MonoBehaviour:
   m_InteractiveItem: {fileID: 1458607976}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
+  sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: mig_egitim_vid2b
@@ -2129,6 +2132,7 @@ MonoBehaviour:
   m_InteractiveItem: {fileID: 1239721909}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
+  sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: mig_egitim_vid2b
@@ -4189,6 +4193,7 @@ MonoBehaviour:
   m_InteractiveItem: {fileID: 1239721909}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
+  sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: mig_egitim_vid2b
@@ -4413,6 +4418,7 @@ MonoBehaviour:
   m_InteractiveItem: {fileID: 1239721909}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
+  sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: mig_egitim_vid2c
@@ -4502,6 +4508,7 @@ MonoBehaviour:
   m_InteractiveItem: {fileID: 1239721909}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
+  sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: mig_egitim_vid2b
@@ -4694,6 +4701,7 @@ MonoBehaviour:
   m_InteractiveItem: {fileID: 188509163}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
+  sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: mig_egitim_vid2b
@@ -5008,19 +5016,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11499614, guid: 140cb28123f778d4795e5766bd260dbb, type: 2}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.7941176
       objectReference: {fileID: 0}
     - target: {fileID: 11499614, guid: 140cb28123f778d4795e5766bd260dbb, type: 2}
       propertyPath: m_Color.g
-      value: 0.26896554
+      value: 0.7941176
       objectReference: {fileID: 0}
     - target: {fileID: 11499614, guid: 140cb28123f778d4795e5766bd260dbb, type: 2}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.7941176
       objectReference: {fileID: 0}
     - target: {fileID: 11499614, guid: 140cb28123f778d4795e5766bd260dbb, type: 2}
       propertyPath: m_Color.a
-      value: 0.334
+      value: 0.366
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 140cb28123f778d4795e5766bd260dbb, type: 2}
@@ -5087,6 +5095,7 @@ MonoBehaviour:
   m_InteractiveItem: {fileID: 1458607976}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
+  sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: mig_egitim_vid2c
@@ -5464,6 +5473,7 @@ MonoBehaviour:
   m_InteractiveItem: {fileID: 188509163}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
+  sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: mig_egitim_vid2b
@@ -5567,6 +5577,7 @@ MonoBehaviour:
   m_InteractiveItem: {fileID: 1458607976}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
+  sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: mig_egitim_vid2b
@@ -5713,6 +5724,7 @@ MonoBehaviour:
   m_InteractiveItem: {fileID: 1458607976}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
+  sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: mig_egitim_vid2b
@@ -5802,6 +5814,7 @@ MonoBehaviour:
   m_InteractiveItem: {fileID: 1239721909}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
+  sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: mig_egitim_vid2c
@@ -6061,6 +6074,7 @@ MonoBehaviour:
   m_InteractiveItem: {fileID: 188509163}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
+  sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: mig_egitim_vid2c
@@ -6164,6 +6178,7 @@ MonoBehaviour:
   m_InteractiveItem: {fileID: 1458607976}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
+  sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: mig_egitim_vid2b
@@ -6267,6 +6282,7 @@ MonoBehaviour:
   m_InteractiveItem: {fileID: 188509163}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
+  sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: mig_egitim_vid2c
@@ -6881,6 +6897,7 @@ MonoBehaviour:
   m_InteractiveItem: {fileID: 188509163}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
+  sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: mig_egitim_vid2b
@@ -6984,6 +7001,7 @@ MonoBehaviour:
   m_InteractiveItem: {fileID: 188509163}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
+  sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: mig_egitim_vid2c
@@ -7566,6 +7584,7 @@ MonoBehaviour:
   m_InteractiveItem: {fileID: 1458607976}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
+  sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: mig_egitim_vid2c
@@ -7669,6 +7688,7 @@ MonoBehaviour:
   m_InteractiveItem: {fileID: 1458607976}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
+  sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: mig_egitim_vid2c
@@ -7927,6 +7947,7 @@ MonoBehaviour:
   m_InteractiveItem: {fileID: 1239721909}
   videoLoader: {fileID: 677634531}
   sceneToActivate: {fileID: 815698834}
+  sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
   videoName: mig_egitim_vid2c

@@ -21,6 +21,7 @@ public class PlayButton : MonoBehaviour
   //  private AudioSource audio;
     public VideoLoader videoLoader;
     public GameObject sceneToActivate;
+	public GameObject sceneToDisable;
     [SerializeField]private Image fadePanel;
 
     public Downloader downloader;
@@ -113,7 +114,7 @@ public class PlayButton : MonoBehaviour
 
         m_CameraFade.enabled = false;
         sceneToActivate.SetActive(true);
-   
+		sceneToDisable.SetActive (false);
         fadePanel.color = Color.clear;
         buttonActivated = true;
 
