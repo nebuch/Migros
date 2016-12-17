@@ -26,7 +26,7 @@ namespace VRStandardAssets.Utils
         private bool m_IsFading;                                        // Whether the screen is currently fading.
         private float m_FadeStartTime;                                  // The time when fading started.
         private Color m_FadeOutColor;                                   // This is a transparent version of the fade colour, it will ensure fading looks normal.
-
+		public bool _fadeComplete;
 
         public bool IsFading { get { return m_IsFading; } }
 
@@ -144,6 +144,7 @@ namespace VRStandardAssets.Utils
         {
             // Fading is now happening.  This ensures it won't be interupted by non-coroutine calls.
             m_IsFading = true;
+			_fadeComplete = false;
 
             // Execute this loop once per frame until the timer exceeds the duration.
             float timer = 0f;
@@ -159,10 +160,13 @@ namespace VRStandardAssets.Utils
 
             // Fading is finished so allow other fading calls again.
             m_IsFading = false;
+			_fadeComplete = true;
 
             // If anything is subscribed to OnFadeComplete call it.
-            if (OnFadeComplete != null)
-                OnFadeComplete();
+			if (OnFadeComplete != null) {
+				OnFadeComplete ();
+
+			}
         }
     }
 }

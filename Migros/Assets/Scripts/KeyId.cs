@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
-using VRStandardAssets.Utils;
+
 
 public enum KeyAction
 {
@@ -13,7 +13,7 @@ public class KeyId : MonoBehaviour
 {
 	public char key;
 	public KeyAction action;
-    public VRCameraFade _cameraFade;
+
 
 	public void Action()
 	{
@@ -21,9 +21,10 @@ public class KeyId : MonoBehaviour
 		default:
 		case KeyAction.Letter:
 			SendToInput ();
+			GetComponentInChildren<Animator> ().Play ("quadAnim");
 			break;
 		case KeyAction.Enter:
-			StartCoroutine(Enter());
+			Enter ();
 			break;
 		case KeyAction.Clear:
 			Clear ();
@@ -36,9 +37,9 @@ public class KeyId : MonoBehaviour
 		UserInput.Instance.AddLetter (key);
 	}
 
-	private IEnumerator Enter()
+	private void Enter()
 	{
-        yield return StartCoroutine(_cameraFade.BeginFadeOut(true));
+		//yield return StartCoroutine(_cameraFade.BeginFadeOut(true));
 		UserInput.Instance.Enter ();
 	}
 
