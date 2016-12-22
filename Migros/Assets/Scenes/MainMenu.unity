@@ -1209,7 +1209,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2b
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &205027162
@@ -1313,7 +1313,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2b
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &223138448
@@ -1423,7 +1423,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2b
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &258307682
@@ -1527,7 +1527,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2c
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &259913049
@@ -1631,7 +1631,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2b
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &269912574
@@ -1735,7 +1735,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2c
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &276333308
@@ -1874,7 +1874,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2b
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &300476276
@@ -1978,7 +1978,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2b
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &306219804
@@ -2082,7 +2082,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2c
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &309391499
@@ -2761,7 +2761,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2c
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &608837497
@@ -2909,7 +2909,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2c
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &684742765
@@ -3013,7 +3013,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2b
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &709988115
@@ -3192,7 +3192,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2b
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &719110028
@@ -3337,7 +3337,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2b
+  videoName: 02-Parcalama - 1
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &772392945
@@ -3352,7 +3352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QAGameobjectToEnable: {fileID: 952379086}
-  QAGameobjectToDisable: {fileID: 0}
+  QAGameobjectToDisable: {fileID: 120290658}
   _loader: {fileID: 677634531}
   _videoPlayer: {fileID: 677634526}
 --- !u!114 &772392946
@@ -3477,7 +3477,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2c
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &821411751
@@ -5558,7 +5558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QAGameobjectToEnable: {fileID: 952379086}
-  QAGameobjectToDisable: {fileID: 0}
+  QAGameobjectToDisable: {fileID: 120290658}
   _loader: {fileID: 677634531}
   _videoPlayer: {fileID: 677634526}
 --- !u!114 &941981728
@@ -5580,7 +5580,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2b
+  videoName: 02-Parcalama - 1
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!1 &951782411
@@ -5636,7 +5636,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2b
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &951782414
@@ -5909,7 +5909,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2c
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &1013394479
@@ -5999,7 +5999,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2b
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &1054535702
@@ -6192,7 +6192,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2b
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &1149113787
@@ -6586,7 +6586,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2c
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &1182494431
@@ -6964,7 +6964,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2b
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &1312408778
@@ -7068,7 +7068,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2c
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &1320305002
@@ -7172,7 +7172,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2c
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &1324614360
@@ -7276,7 +7276,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2b
+  videoName: 02-Parcalama - 1
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &1349860684
@@ -7291,7 +7291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QAGameobjectToEnable: {fileID: 952379086}
-  QAGameobjectToDisable: {fileID: 0}
+  QAGameobjectToDisable: {fileID: 120290658}
   _loader: {fileID: 677634531}
   _videoPlayer: {fileID: 677634526}
 --- !u!114 &1349860685
@@ -7423,7 +7423,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2b
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &1420960645
@@ -7513,7 +7513,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2c
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &1432383131
@@ -7772,7 +7772,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2b
+  videoName: 02-Parcalama - 1
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &1508454980
@@ -7787,7 +7787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QAGameobjectToEnable: {fileID: 952379086}
-  QAGameobjectToDisable: {fileID: 0}
+  QAGameobjectToDisable: {fileID: 120290658}
   _loader: {fileID: 677634531}
   _videoPlayer: {fileID: 677634526}
 --- !u!114 &1508454981
@@ -7995,7 +7995,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2c
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &1610809621
@@ -8099,7 +8099,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2b
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &1686853271
@@ -8203,7 +8203,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2b
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &1691256465
@@ -8307,7 +8307,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2b
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &1693019505
@@ -8411,7 +8411,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2b
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &1730475178
@@ -8515,7 +8515,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2c
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &1743396454
@@ -8619,7 +8619,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2b
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &1787253469
@@ -9234,7 +9234,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2b
+  videoName: 02-Parcalama - 1
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &1943011094
@@ -9249,7 +9249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QAGameobjectToEnable: {fileID: 952379086}
-  QAGameobjectToDisable: {fileID: 0}
+  QAGameobjectToDisable: {fileID: 120290658}
   _loader: {fileID: 677634531}
   _videoPlayer: {fileID: 677634526}
 --- !u!114 &1943011095
@@ -9338,7 +9338,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2c
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &1943016021
@@ -9921,7 +9921,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2c
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &2067606727
@@ -10025,7 +10025,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2c
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &2074063749
@@ -10284,7 +10284,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2c
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &2090734120
@@ -10388,7 +10388,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2c
+  videoName: 02-Parcalama - 2.mp4
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &2137394101
@@ -10492,7 +10492,7 @@ MonoBehaviour:
   sceneToDisable: {fileID: 2047639988}
   fadePanel: {fileID: 1182274837}
   downloader: {fileID: 0}
-  videoName: mig_egitim_vid2b
+  videoName: 02-Parcalama - 1
   buttonActivated: 0
   text: {fileID: 0}
 --- !u!114 &2142823461
@@ -10507,7 +10507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QAGameobjectToEnable: {fileID: 952379086}
-  QAGameobjectToDisable: {fileID: 0}
+  QAGameobjectToDisable: {fileID: 120290658}
   _loader: {fileID: 677634531}
   _videoPlayer: {fileID: 677634526}
 --- !u!114 &2142823462
