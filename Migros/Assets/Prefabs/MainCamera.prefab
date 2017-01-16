@@ -103,8 +103,9 @@ GameObject:
   - 114: {fileID: 11485032}
   - 114: {fileID: 11412002}
   - 114: {fileID: 11406742}
-  - 114: {fileID: 11418856}
   - 114: {fileID: 11468236}
+  - 114: {fileID: 114000011478919962}
+  - 114: {fileID: 114000013325278998}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -118,10 +119,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168970}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -381.6, y: 9.4, z: 6.7}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_Children:
   - {fileID: 22426984}
   m_Father: {fileID: 0}
@@ -192,6 +193,7 @@ MonoBehaviour:
   m_FadeDuration: 2
   m_FadeInOnSceneLoad: 1
   m_FadeInOnStart: 1
+  _fadeComplete: 0
 --- !u!114 &11412002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -208,23 +210,6 @@ MonoBehaviour:
   m_Image: {fileID: 11483478}
   m_ReticleTransform: {fileID: 22419314}
   m_Camera: {fileID: 492384}
---- !u!114 &11418856
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 168970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efc21d660b6557940a0cce1888e22fed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MenuSceneName: MainMenu
-  m_VRInput: {fileID: 11422550}
-  m_VRCameraFade: {fileID: 11406742}
-  m_ScreenFadeIn: {fileID: 11406742}
-  cameraToDisable: {fileID: 2036194}
-  goToMenu: 0
 --- !u!114 &11422550
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -581,3 +566,39 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 168970}
   m_IsPrefabParent: 1
+--- !u!114 &114000011478919962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 929913711ceab77448f9cf8ff946b89d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000013325278998
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66fb05cd94e844b48bc192e96bbfcd37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axes: 0
+  sensitivityX: 15
+  sensitivityY: 15
+  oyuncu: {fileID: 0}
+  minimumX: -360
+  maximumX: 360
+  minimumY: -60
+  maximumY: 60
+  smoothLookX: 0
+  sensivityXmemory: 0
+  maximumXmemory: 0
+  minimumXmemory: 0
+  maximumYmemory: 0
+  minimumYmemory: 0

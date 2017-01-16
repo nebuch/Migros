@@ -91,12 +91,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196862}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb521e9ace49d8546a83f420a0debd12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_strFileName: ed_1024_512kb.mp4
+  m_strFileName: 
   m_TargetMaterial:
   - {fileID: 196862}
   m_bFullScreen: 0
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_objResize: []
   m_bLoop: 0
   m_bAutoPlay: 1
-  m_bInit: 0
+  m_bInit: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

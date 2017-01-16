@@ -13,22 +13,15 @@ namespace VRStandardAssets.Menu
     {
         public event Action<MenuButton> OnButtonSelected;                   // This event is triggered when the selection of the button has finished.
 
+
+        [SerializeField] private string m_SceneToLoad;                      // The name of the scene to load.
+        [SerializeField] private VRCameraFade m_CameraFade;                 // This fades the scene out when a new scene is about to be loaded.
         [SerializeField] private SelectionRadial m_SelectionRadial;         // This controls when the selection is complete.
         [SerializeField] private VRInteractiveItem m_InteractiveItem;       // The interactive item for where the user should click to load the level.
-        [SerializeField] private MenuManager manager;
 
-        public GameObject videoInfo;                                        //The info item, for where each video information is shown.
-        public MediaPlayerCtrl videoPlayer;
 
-        public bool infoActive;
         private bool m_GazeOver;                                            // Whether the user is looking at the VRInteractiveItem currently.
 
-        void Update()
-        {
-            m_SelectionRadial = GameObject.Find("MainCamera").GetComponent<SelectionRadial>();
-            this.gameObject.SetActive(true);
-            videoPlayer.m_strFileName = null;
-        }
 
         private void OnEnable ()
         {
@@ -68,30 +61,25 @@ namespace VRStandardAssets.Menu
         {
             // If the user is looking at the rendering of the scene when the radial's selection finishes, activate the button.
             if(m_GazeOver)
-               ActivateButton();
+                StartCoroutine (ActivateButton());
         }
 
 
-        private void ActivateButton()
+        private IEnumerator ActivateButton()
         {
+            // If the camera is already fading, ignore.
+            if (m_CameraFade.IsFading)
+                yield break;
+
             // If anything is subscribed to the OnButtonSelected event, call it.
             if (OnButtonSelected != null)
                 OnButtonSelected(this);
 
+            // Wait for the camera to fade out.
+            yield return StartCoroutine(m_CameraFade.BeginFadeOut(true));
 
-            GotoInfo();
-            
-        }
-
-        private void GotoInfo()
-        {
-            //Disable thumbnails and enable information
-            videoInfo.SetActive(true);
-            
-            infoActive = true;
-            manager.DisableUI();
-            
-
+            // Load the level.
+            SceneManager.LoadScene(m_SceneToLoad, LoadSceneMode.Single);
         }
     }
 }
