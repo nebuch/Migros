@@ -48,8 +48,15 @@ public class QAManager : MonoBehaviour
             answer4Text.text = ans4;
         }
             
+        
+    }
 
-        Debug.Log(_numberOfAnswers);
+    public void HideQuestionAnswer() {
+        question.SetActive(false);
+        answer1.SetActive(false);
+        answer2.SetActive(false);
+        answer3.SetActive(false);
+        answer4.SetActive(false);
     }
 
 }

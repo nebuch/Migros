@@ -9,8 +9,10 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private BooleanData b_data;
     [SerializeField] private QAManager _QAManager;
     [SerializeField] private MediaPlayerCtrl videoPlayer;
-    [SerializeField] private string videoPath;
+    [SerializeField] private VideoLoader videoLoader;
+    [SerializeField] private GameObject[] answerSystem;
     [SerializeField] private string currentVideo;
+    [SerializeField] private string answerToVideo;
 
     void Start () {
 	    v_data = FindObjectOfType<VideoData>();
@@ -18,45 +20,44 @@ public class LevelManager : MonoBehaviour
         a_data = FindObjectOfType<AnswerData>();
         b_data = FindObjectOfType<BooleanData>();
         videoPlayer = FindObjectOfType<MediaPlayerCtrl>();
+        videoLoader = FindObjectOfType<VideoLoader>();
+        
         _QAManager = GameObject.FindObjectOfType<QAManager>();
-        videoPath = "file://" + Application.persistentDataPath + "/";
+       
+       // answerToVideo = 
+        
     }
 	
 	void Update () {
 	    //StartCoroutine(Sequence_1());
         Sequence_1();
-	}
+    }
 
     void Sequence_1() {
-        videoPlayer.m_strFileName = videoPath + v_data.entryVideo + ".mp4";
+        videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.entryVideo + ".mp4";
         if(videoPlayer.GetCurrentState() == MediaPlayerCtrl.MEDIAPLAYER_STATE.END) {
             if (b_data.noQuestion0) {
                 //videoPlayer.m_strFileName = videoPath + v_data.nextVideo0 + ".mp4";
                 currentVideo = v_data.nextVideo0;
-                LoadVideo(currentVideo);
+                videoLoader.LoadVideo(currentVideo);
             }
             else {
                 _QAManager.ShowQuestionAnswer(q_data.question0, a_data.answer1, a_data.answer2, a_data.answer3, a_data.answer4, a_data.numberOfAnswers);
+                foreach (GameObject answer in answerSystem) {
+                    if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer1") {
+                        videoLoader.LoadVideo(v_data.video1);
+                        
+                    }
+
+                    if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer2") {
+                        videoLoader.LoadVideo(v_data.video2);
+                    }
+                     
+                    _QAManager.HideQuestionAnswer();      
+                }
             }
         }
-        
-
-
     }
 
     
-
-
-
-
-
-
-
-    void LoadVideo(string currentVideo) {
-        videoPlayer.Stop();
-        videoPlayer.UnLoad();
-        videoPlayer.m_strFileName = videoPath + currentVideo + ".mp4";
-        videoPlayer.Load(videoPlayer.m_strFileName);
-        videoPlayer.Play();
-    }
 }

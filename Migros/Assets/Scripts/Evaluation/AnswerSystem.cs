@@ -1,14 +1,23 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using VRStandardAssets.Utils;
 
 
-public class AnswerSystem : MonoBehaviour {
-	public VideoLoader _videoLoader;
+public class AnswerSystem : MonoBehaviour 
+{
+    public event Action<AnswerSystem> OnAnswerSelected;
 
-	public GameObject _toVideo;
-    public GameObject videoToDisable;
+    [SerializeField] private VRCameraFade m_CameraFade;                 // This fades the scene out when a new scene is about to be loaded.
+    [SerializeField] private SelectionRadial m_SelectionRadial;         // This controls when the selection is complete.
+    [SerializeField] private VRInteractiveItem m_InteractiveItem;       // The interactive item for where the user should click to load the level.
+    [SerializeField] private VideoLoader _videoLoader;
+    [SerializeField] private QAManager _QAManager;
+
+    private bool m_GazeOver;                                            // Whether the user is looking at the VRInteractiveItem currently.
+    public string answerGiven;
 
 	[Header ("Answer Attr.")]
 	public int _questionID;
@@ -17,69 +26,66 @@ public class AnswerSystem : MonoBehaviour {
 	private string _userID;
 
 	[Header ("Player")]
-
-	public Collider _targeter;
-	public Button _button;
 	public GameObject _eventSystem;
 	private bool _selected;
 
-	void Start () {
-		_userID = PlayerPrefs.GetString ("userID");
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    void Start() {
+        _userID = PlayerPrefs.GetString("userID");
+    }
+
+    private void OnEnable() {
+        m_InteractiveItem.OnOver += HandleOver;
+        m_InteractiveItem.OnOut += HandleOut;
+        m_SelectionRadial.OnSelectionComplete += HandleSelectionComplete;
+    }
+
+    private void OnDisable() {
+        m_InteractiveItem.OnOver -= HandleOver;
+        m_InteractiveItem.OnOut -= HandleOut;
+        m_SelectionRadial.OnSelectionComplete -= HandleSelectionComplete;
+    }
+
+    private void HandleOver() {
+        // When the user looks at the rendering of the scene, show the radial.
+        m_SelectionRadial.Show();
+
+        m_GazeOver = true;
+    }
 
 
-		if(_selected&&Input.GetButtonDown("Fire1")){
+    private void HandleOut() {
+        // When the user looks away from the rendering of the scene, hide the radial.
+        m_SelectionRadial.Hide();
 
-			_button.onClick.Invoke ();
-			Debug.Log (this.gameObject.name + "was clicked");
-		}
-	}
+        m_GazeOver = false;
+    }
+
+
+    private void HandleSelectionComplete() {
+        // If the user is looking at the rendering of the scene when the radial's selection finishes, activate the button.
+        if (m_GazeOver)
+            //StartCoroutine(LoadNextVideo());
+            ThisAnswerGiven();
+    }
 
 	public void ThisAnswerGiven(){
-	
-		//_videoLoader._nextVideo = _toVideo;
-		//_videoLoader.VideoLoad ();
+        if (this.gameObject.name == "Answer1" ||
+            this.gameObject.name == "Answer2" ||
+            this.gameObject.name == "Answer3" ||
+            this.gameObject.name == "Answer4") {
+            answerGiven = this.gameObject.name;
+            //PlayerPrefs.SetInt("answer", 0);
+             
+        }
 
-        _toVideo.SetActive(true);
-        videoToDisable.SetActive(false);
-#if UNITY_EDITOR
-        _videoLoader._nextVideo = _toVideo.GetComponent<PlayButton>().videoName + ".mp4";
-#endif
-#if UNITY_ANDROID && !UNITY_EDITOR
-        _videoLoader._nextVideo ="file:///" + Application.persistentDataPath + "/" + _toVideo.GetComponent<PlayButton>().videoName + ".mp4";
-#endif
-        _videoLoader.VideoLoad();
+        // _videoLoader.LoadVideo();
         PlayerPrefs.SetString (string.Format ("{0}: {1:0}_ {2:0}: {3:0}_ {4:0}: {5:0}_ {6:0}: {7:0}", "user", _userID, "pack", _packID, "question", _questionID, "answer", _answerID), "Answer Given");
 
 		Debug.Log (string.Format ("{0}: {1:0}_ {2:0}: {3:0}_ {4:0}: {5:0}_ {6:0}: {7:0}", "user", _userID, "pack", _packID, "question", _questionID, "answer", _answerID));
 	}
 
-	void OnTriggerEnter(Collider other){
+    
 	
-	
-
-		if (other == _targeter) {
-		
-			_button.Select ();
-			_selected = true;
-		}
-	
-	}
-
-
-
-	void OnTriggerExit(Collider other2){
-
-		if (other2 == _targeter) {
-
-			_eventSystem.GetComponent<EventSystem> ().SetSelectedGameObject (null);
-			_selected = false;
-		}
-
-	}
 
 
 

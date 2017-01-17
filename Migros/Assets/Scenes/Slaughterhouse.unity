@@ -198,19 +198,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000012064954774, guid: 8678609a23119f14584449395c6d0279, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1000011630746832, guid: 8678609a23119f14584449395c6d0279, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1000012780080192, guid: 8678609a23119f14584449395c6d0279, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1000010642646948, guid: 8678609a23119f14584449395c6d0279, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1000012940144278, guid: 8678609a23119f14584449395c6d0279, type: 2}
       propertyPath: m_IsActive
@@ -356,6 +356,25 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 403088882ac92734287c2ab4c69108c9, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &201482181 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 196862, guid: 403088882ac92734287c2ab4c69108c9, type: 2}
+  m_PrefabInternal: {fileID: 188466016}
+--- !u!114 &201482182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 201482181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f7937c1db42ffd4d962627628c7d9ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _videoPlayer: {fileID: 0}
+  _currentVideo: 
+  _nextVideo: 
+  isPlaying: 0
 --- !u!114 &440085828 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114000010472203496, guid: 8678609a23119f14584449395c6d0279,
@@ -524,13 +543,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 917092915}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad9f1a2db28aaa44398a897e946034ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 1bda7a5eb1df5d64bbc11c657d8fa775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SceneToLoad: 
   m_CameraFade: {fileID: 1627064191}
   m_SelectionRadial: {fileID: 1627064193}
   m_InteractiveItem: {fileID: 917092920}
+  _videoLoader: {fileID: 201482182}
+  _QAManager: {fileID: 1886791763}
+  answerGiven: 
+  _questionID: 0
+  _answerID: 0
+  _eventSystem: {fileID: 0}
 --- !u!1001 &1046691771
 Prefab:
   m_ObjectHideFlags: 0
@@ -538,6 +562,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114000012899817068, guid: e411993e03e03d346a6dbc3741340070,
+        type: 2}
+      propertyPath: answerSystem.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013720080960, guid: e411993e03e03d346a6dbc3741340070, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -570,6 +599,31 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012899817068, guid: e411993e03e03d346a6dbc3741340070,
+        type: 2}
+      propertyPath: answerSystem
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012899817068, guid: e411993e03e03d346a6dbc3741340070,
+        type: 2}
+      propertyPath: answerSystem.Array.data[0]
+      value: 
+      objectReference: {fileID: 1537285589}
+    - target: {fileID: 114000012899817068, guid: e411993e03e03d346a6dbc3741340070,
+        type: 2}
+      propertyPath: answerSystem.Array.data[1]
+      value: 
+      objectReference: {fileID: 1077152429}
+    - target: {fileID: 114000012899817068, guid: e411993e03e03d346a6dbc3741340070,
+        type: 2}
+      propertyPath: answerSystem.Array.data[2]
+      value: 
+      objectReference: {fileID: 917092915}
+    - target: {fileID: 114000012899817068, guid: e411993e03e03d346a6dbc3741340070,
+        type: 2}
+      propertyPath: answerSystem.Array.data[3]
+      value: 
+      objectReference: {fileID: 1840675069}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e411993e03e03d346a6dbc3741340070, type: 2}
   m_IsPrefabParent: 0
@@ -597,13 +651,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1077152429}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad9f1a2db28aaa44398a897e946034ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 1bda7a5eb1df5d64bbc11c657d8fa775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SceneToLoad: 
   m_CameraFade: {fileID: 1627064191}
   m_SelectionRadial: {fileID: 1627064193}
   m_InteractiveItem: {fileID: 1077152434}
+  _videoLoader: {fileID: 201482182}
+  _QAManager: {fileID: 1886791763}
+  answerGiven: 
+  _questionID: 0
+  _answerID: 0
+  _eventSystem: {fileID: 0}
 --- !u!1 &1476502171
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,13 +730,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1537285589}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad9f1a2db28aaa44398a897e946034ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 1bda7a5eb1df5d64bbc11c657d8fa775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SceneToLoad: 
   m_CameraFade: {fileID: 1627064191}
   m_SelectionRadial: {fileID: 1627064193}
   m_InteractiveItem: {fileID: 1537285594}
+  _videoLoader: {fileID: 201482182}
+  _QAManager: {fileID: 1886791763}
+  answerGiven: 
+  _questionID: 0
+  _answerID: 0
+  _eventSystem: {fileID: 0}
 --- !u!114 &1544405914 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11462960, guid: 140cb28123f778d4795e5766bd260dbb,
@@ -726,13 +790,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1840675069}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad9f1a2db28aaa44398a897e946034ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 1bda7a5eb1df5d64bbc11c657d8fa775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SceneToLoad: 
   m_CameraFade: {fileID: 1627064191}
   m_SelectionRadial: {fileID: 1627064193}
   m_InteractiveItem: {fileID: 1840675074}
+  _videoLoader: {fileID: 201482182}
+  _QAManager: {fileID: 1886791763}
+  answerGiven: 
+  _questionID: 0
+  _answerID: 0
+  _eventSystem: {fileID: 0}
 --- !u!1 &1886791762
 GameObject:
   m_ObjectHideFlags: 0
