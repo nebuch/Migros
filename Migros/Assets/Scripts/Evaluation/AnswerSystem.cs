@@ -74,14 +74,14 @@ public class AnswerSystem : MonoBehaviour
             this.gameObject.name == "Answer3" ||
             this.gameObject.name == "Answer4") {
             answerGiven = this.gameObject.name;
-            //PlayerPrefs.SetInt("answer", 0);
+            
              
         }
 
         // _videoLoader.LoadVideo();
-        PlayerPrefs.SetString (string.Format ("{0}: {1:0}_ {2:0}: {3:0}_ {4:0}: {5:0}_ {6:0}: {7:0}", "user", _userID, "pack", _packID, "question", _questionID, "answer", _answerID), "Answer Given");
+        //PlayerPrefs.SetString (string.Format ("{0}: {1:0}_ {2:0}: {3:0}_ {4:0}: {5:0}_ {6:0}: {7:0}", "user", _userID, "pack", _packID, "question", _questionID, "answer", _answerID), "Answer Given");
 
-		Debug.Log (string.Format ("{0}: {1:0}_ {2:0}: {3:0}_ {4:0}: {5:0}_ {6:0}: {7:0}", "user", _userID, "pack", _packID, "question", _questionID, "answer", _answerID));
+		//Debug.Log (string.Format ("{0}: {1:0}_ {2:0}: {3:0}_ {4:0}: {5:0}_ {6:0}: {7:0}", "user", _userID, "pack", _packID, "question", _questionID, "answer", _answerID));
 	}
 
     

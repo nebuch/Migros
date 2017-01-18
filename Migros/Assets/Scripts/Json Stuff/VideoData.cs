@@ -6,9 +6,8 @@ public class VideoData : MonoBehaviour
 {
     private JsonData data;
     [SerializeField] private ReadJson videoData;
-    [SerializeField] public string entryVideo, entryVideo1, entryVideo2, entryVideo3, entryVideo4;
     [SerializeField] public string nextVideo0, nextVideo1, nextVideo2, nextVideo3, nextVideo4;
-    [SerializeField] public string video1, video2, video3, video4;
+    [SerializeField] public string video0, video1, video2, video3, video4;
     [SerializeField] public string video1_1, video1_2, video1_3, video1_4;
     [SerializeField] public string video2_1, video2_2, video2_3, video2_4;
     [SerializeField] public string video3_1, video3_2, video3_3, video3_4;
@@ -24,12 +23,12 @@ public class VideoData : MonoBehaviour
 	}
 	
     private void InitializeVideoData() {
-        entryVideo = data["entryVideo"].ToString();
-        entryVideo1 = data["entryVideo1"].ToString();   //entryVideo1 is equal to video1
-        entryVideo2 = data["entryVideo2"].ToString();   //entryVideo2 is equal to video2
-        entryVideo3 = data["entryVideo3"].ToString();   //entryVideo3 is equal to video3
-        entryVideo4 = data["entryVideo4"].ToString();   //entryVideo4 is equal to video4
-
+        /* entryVideo = data["entryVideo"].ToString();
+         entryVideo1 = data["entryVideo1"].ToString();   //entryVideo1 is equal to video1
+         entryVideo2 = data["entryVideo2"].ToString();   //entryVideo2 is equal to video2
+         entryVideo3 = data["entryVideo3"].ToString();   //entryVideo3 is equal to video3
+         entryVideo4 = data["entryVideo4"].ToString();   //entryVideo4 is equal to video4 */
+        video0 = data["video0"].ToString();
         video1 = data["video1"].ToString();
         video2 = data["video2"].ToString();
         video3 = data["video3"].ToString();

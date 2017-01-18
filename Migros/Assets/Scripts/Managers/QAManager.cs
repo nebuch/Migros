@@ -4,9 +4,6 @@ using UnityEngine.UI;
 
 public class QAManager : MonoBehaviour 
 {
-    [SerializeField] private QuestionData q_data;
-    [SerializeField] private AnswerData a_data;
-
     public GameObject question;
     public Text questionText;
     public GameObject answer1;
@@ -20,8 +17,7 @@ public class QAManager : MonoBehaviour
 
     // Use this for initialization
     void Start () {
-        q_data = FindObjectOfType<QuestionData>();
-        a_data = FindObjectOfType<AnswerData>();
+       
         
     }
 	

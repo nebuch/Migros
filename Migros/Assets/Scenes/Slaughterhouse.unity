@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692558, g: 0.49678743, b: 0.57508624, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692528, g: 0.49678677, b: 0.57508475, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -624,6 +624,11 @@ Prefab:
       propertyPath: answerSystem.Array.data[3]
       value: 
       objectReference: {fileID: 1840675069}
+    - target: {fileID: 114000011167076678, guid: e411993e03e03d346a6dbc3741340070,
+        type: 2}
+      propertyPath: createAnswer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e411993e03e03d346a6dbc3741340070, type: 2}
   m_IsPrefabParent: 0
@@ -829,8 +834,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61cd0fb4a1c36fa428bd690d7b04dab7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  q_data: {fileID: 0}
-  a_data: {fileID: 0}
   question: {fileID: 2050633162}
   questionText: {fileID: 440085828}
   answer1: {fileID: 1537285589}

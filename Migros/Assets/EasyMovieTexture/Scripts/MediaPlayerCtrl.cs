@@ -788,7 +788,7 @@ public class MediaPlayerCtrl : MonoBehaviour
 
     void OnApplicationPause(bool bPause)
     {
-        Debug.Log("ApplicationPause : " + bPause);
+        //Debug.Log("ApplicationPause : " + bPause);
         if (bPause == true)
         {
             if (m_CurrentState == MEDIAPLAYER_STATE.PAUSED)
@@ -2089,7 +2089,7 @@ void LoadVideoPart2 ()
 					pStream = (pFormatContext)->streams[i];
 					iStreamIndex = i;
 
-					Debug.Log("Video" +  iStreamIndex);
+					//Debug.Log("Video" +  iStreamIndex);
 				}
 
 			}
