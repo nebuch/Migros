@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692528, g: 0.49678677, b: 0.57508475, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692558, g: 0.49678743, b: 0.57508624, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -353,6 +353,10 @@ Prefab:
       propertyPath: m_Name
       value: VideoPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 11417252, guid: 403088882ac92734287c2ab4c69108c9, type: 2}
+      propertyPath: m_bAutoPlay
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 403088882ac92734287c2ab4c69108c9, type: 2}
   m_IsPrefabParent: 0
@@ -372,9 +376,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _videoPlayer: {fileID: 0}
-  _currentVideo: 
-  _nextVideo: 
-  isPlaying: 0
+  currentVideo: 
+--- !u!114 &201482183 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11417252, guid: 403088882ac92734287c2ab4c69108c9,
+    type: 2}
+  m_PrefabInternal: {fileID: 188466016}
+  m_Script: {fileID: 11500000, guid: fb521e9ace49d8546a83f420a0debd12, type: 3}
 --- !u!114 &440085828 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114000010472203496, guid: 8678609a23119f14584449395c6d0279,
@@ -629,6 +637,11 @@ Prefab:
       propertyPath: createAnswer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012899817068, guid: e411993e03e03d346a6dbc3741340070,
+        type: 2}
+      propertyPath: videoPlayer
+      value: 
+      objectReference: {fileID: 201482183}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e411993e03e03d346a6dbc3741340070, type: 2}
   m_IsPrefabParent: 0
@@ -835,15 +848,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   question: {fileID: 2050633162}
+  question1: {fileID: 0}
+  question2: {fileID: 0}
+  question3: {fileID: 0}
+  question4: {fileID: 0}
   questionText: {fileID: 440085828}
+  questionText1: {fileID: 0}
+  questionText2: {fileID: 0}
+  questionText3: {fileID: 0}
+  questionText4: {fileID: 0}
   answer1: {fileID: 1537285589}
+  answer1_1: {fileID: 0}
+  answer1_2: {fileID: 0}
+  answer1_3: {fileID: 0}
+  answer1_4: {fileID: 0}
   answer1Text: {fileID: 539120578}
+  answer1Text1: {fileID: 0}
+  answer1Text2: {fileID: 0}
+  answer1Text3: {fileID: 0}
+  answer1Text4: {fileID: 0}
   answer2: {fileID: 1077152429}
+  answer2_1: {fileID: 0}
+  answer2_2: {fileID: 0}
+  answer2_3: {fileID: 0}
+  answer2_4: {fileID: 0}
   answer2Text: {fileID: 505149445}
+  answer2Text1: {fileID: 0}
+  answer2Text2: {fileID: 0}
+  answer2Text3: {fileID: 0}
+  answer2Text4: {fileID: 0}
   answer3: {fileID: 917092915}
+  answer3_1: {fileID: 0}
+  answer3_2: {fileID: 0}
+  answer3_3: {fileID: 0}
+  answer3_4: {fileID: 0}
   answer3Text: {fileID: 114087774}
+  answer3Text1: {fileID: 0}
+  answer3Text2: {fileID: 0}
+  answer3Text3: {fileID: 0}
+  answer3Text4: {fileID: 0}
   answer4: {fileID: 1840675069}
+  answer4_1: {fileID: 0}
+  answer4_2: {fileID: 0}
+  answer4_3: {fileID: 0}
+  answer4_4: {fileID: 0}
   answer4Text: {fileID: 1949013549}
+  answer4Text1: {fileID: 0}
+  answer4Text2: {fileID: 0}
+  answer4Text3: {fileID: 0}
+  answer4Text4: {fileID: 0}
 --- !u!4 &1886791764
 Transform:
   m_ObjectHideFlags: 0

@@ -16,49 +16,95 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private string currentVideo;
     [SerializeField] private string answerToVideo;
 
-    public bool s1 = false, s2 = false, s3 = false, s4 = false;
+    public bool block = false;
 
     void Start () {
 	    v_data = FindObjectOfType<VideoData>();
         q_data = FindObjectOfType<QuestionData>();
         a_data = FindObjectOfType<AnswerData>();
         b_data = FindObjectOfType<BooleanData>();
-        videoPlayer = FindObjectOfType<MediaPlayerCtrl>();
-        videoLoader = FindObjectOfType<VideoLoader>();
-        
+       // videoPlayer = FindObjectOfType<MediaPlayerCtrl>();
+        videoLoader = FindObjectOfType<VideoLoader>(); 
         _QAManager = GameObject.FindObjectOfType<QAManager>();
-        
-    }
 
-    void Update () {
-        StartCoroutine(Sequence_1());
-        //Sequence_1();
-    }
-
-
-    IEnumerator Sequence_1() {
-      //  Debug.Log("Current state: " + videoPlayer.GetCurrentState());
         videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video0 + ".mp4";
+    }
+
+    void Update() {
         
-        if(videoPlayer.GetCurrentState() == MediaPlayerCtrl.MEDIAPLAYER_STATE.END) {
-            videoPlayer.enabled = false;
-            if (!b_data.createAnswer) {
-                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.nextVideo0 + ".mp4";
-                videoPlayer.enabled = true;
-                yield return new WaitForSeconds(videoPlayer.GetDuration()/1000);
-                videoPlayer.enabled = false;
+    }
+
+    private void OnEnable() {
+        videoPlayer.OnEnd += PlayVideo;
+    }
+
+    private void OnDisable() {
+        videoPlayer.OnEnd -= PlayVideo;
+    }
+
+    void PlayVideo() {
+        
+        Sequence_1();
+        
+    }
+
+    void Sequence_1() {
+        if (!b_data.createAnswer && !block) {
+            videoLoader.LoadVideo(v_data.nextVideo0);
+            SceneManager.LoadScene("LoginScreen");
+            Debug.Log("Next scene");
+            block = true;
+        }
+
+        if (block && b_data.createAnswer) {
+            _QAManager.ShowQuestionAnswer(q_data.question0, a_data.answer1, a_data.answer2, a_data.answer3, a_data.answer4, a_data.numberOfAnswers);
+
+            foreach (GameObject answer in answerSystem) {
+                if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer1) {
+                    Debug.Log("Answer1");
+                }
             }
-            else {
+        }
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            /*else {
                 
                 _QAManager.ShowQuestionAnswer(q_data.question0, a_data.answer1, a_data.answer2, a_data.answer3, a_data.answer4, a_data.numberOfAnswers);
                 foreach (GameObject answer in answerSystem) {
                     if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer1) {
                         Debug.Log("answer1");
-                        videoPlayer.enabled = true;
-                      //  videoLoader.currentVideo = v_data.video1;
-                        //videoLoader.LoadVideo(v_data.video1);
                         videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video1 + ".mp4";
-                        videoPlayer.Load(videoPlayer.m_strFileName);
+                        videoLoader.LoadVideo();
                         _QAManager.HideQuestionAnswer();
                        // Answer1Video();
                     }
@@ -84,8 +130,8 @@ public class LevelManager : MonoBehaviour
                         Answer4Video();
                     }
                 }  
-            }
-        }
+            }*/
+        
     }
 
     private void Answer1Video()
@@ -109,8 +155,7 @@ public class LevelManager : MonoBehaviour
                         Debug.Log("answer1-1");
                        // videoLoader.LoadVideo(v_data.video1_1);
                         _QAManager.HideQuestionAnswer();
-                       s1 = false;
-                        s2 = true;
+                       
                     }
 
                     if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer2")

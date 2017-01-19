@@ -10,7 +10,7 @@ public class VideoLoader : MonoBehaviour {
     public string currentVideo;
 
     // Use this for initialization
-    void Start () {
+    void Awake () {
         _videoPlayer = FindObjectOfType<MediaPlayerCtrl>();
         videoPath = "file://" + Application.persistentDataPath + "/";
        // LoadVideo();
@@ -27,14 +27,13 @@ public class VideoLoader : MonoBehaviour {
 
 
 
-    public void LoadVideo(){
+    public void LoadVideo(string currentVideo){
 		_videoPlayer.Stop ();
 		_videoPlayer.UnLoad ();
         _videoPlayer.m_strFileName = videoPath + currentVideo + ".mp4";
 		_videoPlayer.Load (_videoPlayer.m_strFileName);
 		_videoPlayer.Play ();
         
-        Debug.Log ("new video loaded");
     }
 
     public string GetVideoPath() {
