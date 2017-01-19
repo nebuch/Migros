@@ -22,6 +22,7 @@ public class BooleanData : MonoBehaviour
     }
 
     private void InitializeBooleanData() {
+        createAnswer = (bool)data["createAnswer"];
         createAnswer1 = (bool)data["createAnswer1"];
         createAnswer2 = (bool)data["createAnswer2"];
         createAnswer3 = (bool)data["createAnswer3"];

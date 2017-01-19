@@ -23,11 +23,7 @@ public class VideoData : MonoBehaviour
 	}
 	
     private void InitializeVideoData() {
-        /* entryVideo = data["entryVideo"].ToString();
-         entryVideo1 = data["entryVideo1"].ToString();   //entryVideo1 is equal to video1
-         entryVideo2 = data["entryVideo2"].ToString();   //entryVideo2 is equal to video2
-         entryVideo3 = data["entryVideo3"].ToString();   //entryVideo3 is equal to video3
-         entryVideo4 = data["entryVideo4"].ToString();   //entryVideo4 is equal to video4 */
+        
         video0 = data["video0"].ToString();
         video1 = data["video1"].ToString();
         video2 = data["video2"].ToString();

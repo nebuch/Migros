@@ -69,14 +69,15 @@ public class AnswerSystem : MonoBehaviour
     }
 
 	public void ThisAnswerGiven(){
-        if (this.gameObject.name == "Answer1" ||
+       /* if (answerGiven == this.gameObject.GetComponent<Text>().text ||
             this.gameObject.name == "Answer2" ||
             this.gameObject.name == "Answer3" ||
             this.gameObject.name == "Answer4") {
-            answerGiven = this.gameObject.name;
-            
+            answerGiven = this.gameObject.name;*/
+            answerGiven = this.gameObject.GetComponentInChildren<Text>().text;
+          
              
-        }
+        //}
 
         // _videoLoader.LoadVideo();
         //PlayerPrefs.SetString (string.Format ("{0}: {1:0}_ {2:0}: {3:0}_ {4:0}: {5:0}_ {6:0}: {7:0}", "user", _userID, "pack", _packID, "question", _questionID, "answer", _answerID), "Answer Given");

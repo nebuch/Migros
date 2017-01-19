@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System;
 
@@ -15,6 +16,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private string currentVideo;
     [SerializeField] private string answerToVideo;
 
+    public bool s1 = false, s2 = false, s3 = false, s4 = false;
+
     void Start () {
 	    v_data = FindObjectOfType<VideoData>();
         q_data = FindObjectOfType<QuestionData>();
@@ -26,50 +29,57 @@ public class LevelManager : MonoBehaviour
         _QAManager = GameObject.FindObjectOfType<QAManager>();
         
     }
-	
-	void Update () {
-	    //StartCoroutine(Sequence_1());
-        Sequence_1();
-        Debug.Log("Current state: " + videoPlayer.GetCurrentState());
+
+    void Update () {
+        StartCoroutine(Sequence_1());
+        //Sequence_1();
     }
 
-    void Sequence_1() {
+
+    IEnumerator Sequence_1() {
       //  Debug.Log("Current state: " + videoPlayer.GetCurrentState());
         videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video0 + ".mp4";
+        
         if(videoPlayer.GetCurrentState() == MediaPlayerCtrl.MEDIAPLAYER_STATE.END) {
+            videoPlayer.enabled = false;
             if (!b_data.createAnswer) {
-                //videoPlayer.m_strFileName = videoPath + v_data.nextVideo0 + ".mp4";
-                currentVideo = v_data.nextVideo0;
-               StartCoroutine(videoLoader.LoadVideo(currentVideo));
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.nextVideo0 + ".mp4";
+                videoPlayer.enabled = true;
+                yield return new WaitForSeconds(videoPlayer.GetDuration()/1000);
+                videoPlayer.enabled = false;
             }
             else {
-                b_data.createAnswer = true;
+                
                 _QAManager.ShowQuestionAnswer(q_data.question0, a_data.answer1, a_data.answer2, a_data.answer3, a_data.answer4, a_data.numberOfAnswers);
                 foreach (GameObject answer in answerSystem) {
-                    if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer1") {
+                    if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer1) {
                         Debug.Log("answer1");
-                        StartCoroutine(videoLoader.LoadVideo(v_data.video1));
+                        videoPlayer.enabled = true;
+                      //  videoLoader.currentVideo = v_data.video1;
+                        //videoLoader.LoadVideo(v_data.video1);
+                        videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video1 + ".mp4";
+                        videoPlayer.Load(videoPlayer.m_strFileName);
                         _QAManager.HideQuestionAnswer();
-                        Answer1Video();
+                       // Answer1Video();
                     }
 
                     if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer2") {
                         Debug.Log("answer2");
-                        StartCoroutine(videoLoader.LoadVideo(v_data.video2));
+                      //  videoLoader.LoadVideo(v_data.video2);
                         _QAManager.HideQuestionAnswer();
                         Answer2Video();
                     }
 
                     if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer3")
                     {
-                        StartCoroutine(videoLoader.LoadVideo(v_data.video3));
+                      //  videoLoader.LoadVideo(v_data.video3);
                         _QAManager.HideQuestionAnswer();
                         Answer3Video();
                     }
 
                     if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer4")
                     {
-                        StartCoroutine(videoLoader.LoadVideo(v_data.video4));
+                       // videoLoader.LoadVideo(v_data.video4);
                         _QAManager.HideQuestionAnswer();
                         Answer4Video();
                     }
@@ -82,43 +92,45 @@ public class LevelManager : MonoBehaviour
     {
         if (videoPlayer.GetCurrentState() == MediaPlayerCtrl.MEDIAPLAYER_STATE.END)
         {
+            
             if (!b_data.createAnswer1)
             {
                 //videoPlayer.m_strFileName = videoPath + v_data.nextVideo0 + ".mp4";
                 currentVideo = v_data.nextVideo1;
-                StartCoroutine(videoLoader.LoadVideo(currentVideo));
+               // videoLoader.LoadVideo(currentVideo);
             }
             else
             {
                 _QAManager.ShowQuestionAnswer(q_data.question1, a_data.answer1_1, a_data.answer1_2, a_data.answer1_3, a_data.answer1_4, a_data.numberOfAnswers1);
                 foreach (GameObject answer in answerSystem)
                 {
-                    if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer1")
+                    if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer1_1)
                     {
                         Debug.Log("answer1-1");
-                        StartCoroutine(videoLoader.LoadVideo(v_data.video1_1));
+                       // videoLoader.LoadVideo(v_data.video1_1);
                         _QAManager.HideQuestionAnswer();
-                       
+                       s1 = false;
+                        s2 = true;
                     }
 
                     if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer2")
                     {
                         Debug.Log("answer1-2");
-                        StartCoroutine(videoLoader.LoadVideo(v_data.video1_2));
+                       // videoLoader.LoadVideo(v_data.video1_2);
                         _QAManager.HideQuestionAnswer();
                        
                     }
 
                     if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer3")
                     {
-                        StartCoroutine(videoLoader.LoadVideo(v_data.video1_3));
+                       // videoLoader.LoadVideo(v_data.video1_3);
                         _QAManager.HideQuestionAnswer();
                        
                     }
 
                     if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer4")
                     {
-                        StartCoroutine(videoLoader.LoadVideo(v_data.video1_4));
+                       // videoLoader.LoadVideo(v_data.video1_4);
                         
                         _QAManager.HideQuestionAnswer();
                       
@@ -136,7 +148,7 @@ public class LevelManager : MonoBehaviour
             {
                 //videoPlayer.m_strFileName = videoPath + v_data.nextVideo0 + ".mp4";
                 currentVideo = v_data.nextVideo2;
-                StartCoroutine(videoLoader.LoadVideo(currentVideo));
+               // videoLoader.LoadVideo(currentVideo);
                 
             }
             else
@@ -147,7 +159,7 @@ public class LevelManager : MonoBehaviour
                     if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer1")
                     {
                         Debug.Log("answer2-1");
-                        StartCoroutine(videoLoader.LoadVideo(v_data.video2_1));
+                       // videoLoader.LoadVideo(v_data.video2_1);
                         _QAManager.HideQuestionAnswer();
 
                     }
@@ -155,21 +167,21 @@ public class LevelManager : MonoBehaviour
                     if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer2")
                     {
                         Debug.Log("answer2-2");
-                       StartCoroutine(videoLoader.LoadVideo(v_data.video2_2));
+                      // videoLoader.LoadVideo(v_data.video2_2);
                         _QAManager.HideQuestionAnswer();
 
                     }
 
                     if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer3")
                     {
-                       StartCoroutine(videoLoader.LoadVideo(v_data.video2_3));
+                      // videoLoader.LoadVideo(v_data.video2_3);
                         _QAManager.HideQuestionAnswer();
 
                     }
 
                     if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer4")
                     {
-                        StartCoroutine(videoLoader.LoadVideo(v_data.video2_4));
+                      //  videoLoader.LoadVideo(v_data.video2_4);
                         _QAManager.HideQuestionAnswer();
 
                     }
@@ -186,7 +198,7 @@ public class LevelManager : MonoBehaviour
             {
                 //videoPlayer.m_strFileName = videoPath + v_data.nextVideo0 + ".mp4";
                 currentVideo = v_data.nextVideo3;
-                StartCoroutine(videoLoader.LoadVideo(currentVideo));
+               // videoLoader.LoadVideo(currentVideo);
             }
             else
             {
@@ -196,7 +208,7 @@ public class LevelManager : MonoBehaviour
                     if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer1")
                     {
                         Debug.Log("answer3-1");
-                        StartCoroutine(videoLoader.LoadVideo(v_data.video3_1));                        
+                       // videoLoader.LoadVideo(v_data.video3_1);                        
                         _QAManager.HideQuestionAnswer();
 
                     }
@@ -204,21 +216,21 @@ public class LevelManager : MonoBehaviour
                     if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer2")
                     {
                         Debug.Log("answer3-2");
-                       StartCoroutine( videoLoader.LoadVideo(v_data.video3_2));
+                      // videoLoader.LoadVideo(v_data.video3_2);
                         _QAManager.HideQuestionAnswer();
 
                     }
 
                     if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer3")
                     {
-                        StartCoroutine(videoLoader.LoadVideo(v_data.video3_3));
+                       // videoLoader.LoadVideo(v_data.video3_3);
                         _QAManager.HideQuestionAnswer();
 
                     }
 
                     if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer4")
                     {
-                       StartCoroutine(videoLoader.LoadVideo(v_data.video3_4));
+                       // videoLoader.LoadVideo(v_data.video3_4);
                         _QAManager.HideQuestionAnswer();
 
                     }
@@ -235,7 +247,7 @@ public class LevelManager : MonoBehaviour
             {
                 //videoPlayer.m_strFileName = videoPath + v_data.nextVideo0 + ".mp4";
                 currentVideo = v_data.nextVideo4;
-               StartCoroutine(videoLoader.LoadVideo(currentVideo));
+              // videoLoader.LoadVideo(currentVideo);
             }
             else
             {
@@ -245,7 +257,7 @@ public class LevelManager : MonoBehaviour
                     if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer1")
                     {
                         Debug.Log("answer4-1");
-                       StartCoroutine(videoLoader.LoadVideo(v_data.video4_1));
+                        //videoLoader.LoadVideo(v_data.video4_1);
                         _QAManager.HideQuestionAnswer();
 
                     }
@@ -253,21 +265,21 @@ public class LevelManager : MonoBehaviour
                     if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer2")
                     {
                         Debug.Log("answer4-2");
-                       StartCoroutine(videoLoader.LoadVideo(v_data.video4_2));
+                       //videoLoader.LoadVideo(v_data.video4_2);
                         _QAManager.HideQuestionAnswer();
 
                     }
 
                     if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer3")
                     {
-                        StartCoroutine(videoLoader.LoadVideo(v_data.video4_3));
+                        //videoLoader.LoadVideo(v_data.video4_3);
                         _QAManager.HideQuestionAnswer();
 
                     }
 
                     if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer4")
                     {
-                       StartCoroutine(videoLoader.LoadVideo(v_data.video4_4));
+                       //videoLoader.LoadVideo(v_data.video4_4);
                         _QAManager.HideQuestionAnswer();
 
                     }
