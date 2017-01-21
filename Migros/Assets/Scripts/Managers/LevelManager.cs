@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
-using System;
+using VRStandardAssets.Utils;
 
 public class LevelManager : MonoBehaviour 
 {
@@ -11,323 +11,265 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private BooleanData b_data;
     [SerializeField] private QAManager _QAManager;
     [SerializeField] private MediaPlayerCtrl videoPlayer;
+    [SerializeField] private VRCameraFade cameraFade;
     [SerializeField] private VideoLoader videoLoader;
     [SerializeField] private GameObject[] answerSystem;
-    [SerializeField] private string currentVideo;
-    [SerializeField] private string answerToVideo;
+    
+    public string sceneName;
+    public string path;
+    public bool endVideo;
 
-    public bool block = false;
-
-    void Start () {
-	    v_data = FindObjectOfType<VideoData>();
-        q_data = FindObjectOfType<QuestionData>();
-        a_data = FindObjectOfType<AnswerData>();
-        b_data = FindObjectOfType<BooleanData>();
-       // videoPlayer = FindObjectOfType<MediaPlayerCtrl>();
-        videoLoader = FindObjectOfType<VideoLoader>(); 
-        _QAManager = GameObject.FindObjectOfType<QAManager>();
-
-        videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video0 + ".mp4";
+    void Start () { 
+        sceneName = SceneManager.GetActiveScene().name;
+        path = PlayerPrefs.GetString("path");
     }
 
     void Update() {
-        
+       PlayFirstVideo();
     }
 
     private void OnEnable() {
-        videoPlayer.OnEnd += PlayVideo;
+        videoPlayer.OnEnd += CheckVideoEnd;
     }
 
     private void OnDisable() {
-        videoPlayer.OnEnd -= PlayVideo;
+        videoPlayer.OnEnd -= CheckVideoEnd;
     }
 
-    void PlayVideo() {
-        
-        Sequence_1();
-        
+    void PlayFirstVideo() {
+        switch (sceneName) {
+            case "Slaughterhouse":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video0 + ".mp4";
+                Sequence_0();
+                break;
+            case "Hygene":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video0 + ".mp4";
+                Sequence_0();
+                break;
+            case "Logistics":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video0 + ".mp4";
+                Sequence_0();
+                break;
+            case "Grocery":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video0 + ".mp4";
+                Sequence_0();
+                break;
+            case "Checkout":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video0 + ".mp4";
+                Sequence_0();
+                break;
+            case "Bakery":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video0 + ".mp4";
+                Sequence_0();
+                break;
+
+            case "Video1":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video1 + ".mp4";
+                Sequence_1();
+                break;
+            case "Video2":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video2 + ".mp4";
+                Sequence_2();
+                break;
+            case "Video3":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video3 + ".mp4";
+                Sequence_3();
+                break;
+            case "Video4":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video4 + ".mp4";
+                Sequence_4();
+                break;
+            case "Video1-1":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video1_1 + ".mp4";
+                break;
+            case "Video1-2":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video1_2 + ".mp4";
+                break;
+            case "Video1-3":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video1_3 + ".mp4";
+                break;
+            case "Video1-4":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video1_4 + ".mp4";
+                break;
+            case "Video2-1":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video2_1 + ".mp4";
+                break;
+            case "Video2-2":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video2_2 + ".mp4";
+                break;
+            case "Video2-3":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video2_3 + ".mp4";
+                break;
+            case "Video2-4":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video2_4 + ".mp4";
+                break;
+            case "Video3-1":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video3_1 + ".mp4";
+                break;
+            case "Video3-2":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video3_2 + ".mp4";
+                break;
+            case "Video3-3":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video3_3 + ".mp4";
+                break;
+            case "Video3-4":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video3_4 + ".mp4";
+                break;
+            case "Video4-1":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video4_1 + ".mp4";
+                break;
+            case "Video4-2":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video4_2 + ".mp4";
+                break;
+            case "Video4-3":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video4_3 + ".mp4";
+                break;
+            case "Video4-4":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video4_4 + ".mp4";
+                break;
+            case "NextVideo0":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.nextVideo0 + ".mp4";
+                break;
+            case "NextVideo1":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.nextVideo1 + ".mp4";
+                break;
+            case "NextVideo2":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.nextVideo2 + ".mp4";
+                break;
+            case "NextVideo3":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.nextVideo3 + ".mp4";
+                break;
+            case "NextVideo4":
+                videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.nextVideo4 + ".mp4";
+                break;
+        }
     }
 
-    void Sequence_1() {
-        if (!b_data.createAnswer && !block) {
-            videoLoader.LoadVideo(v_data.nextVideo0);
-            SceneManager.LoadScene("LoginScreen");
-            Debug.Log("Next scene");
-            block = true;
+    void CheckVideoEnd() {
+        endVideo = true;     
+    }
+
+    
+    void Sequence_0() {
+        if (!b_data.createAnswer) {
+            SceneManager.LoadScene("NextVideo0");
         }
 
-        if (block && b_data.createAnswer) {
+        if (b_data.createAnswer && endVideo) {
             _QAManager.ShowQuestionAnswer(q_data.question0, a_data.answer1, a_data.answer2, a_data.answer3, a_data.answer4, a_data.numberOfAnswers);
 
             foreach (GameObject answer in answerSystem) {
                 if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer1) {
-                    Debug.Log("Answer1");
+                    SceneManager.LoadScene("Video1");
                 }
-            }
-        }
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            /*else {
-                
-                _QAManager.ShowQuestionAnswer(q_data.question0, a_data.answer1, a_data.answer2, a_data.answer3, a_data.answer4, a_data.numberOfAnswers);
-                foreach (GameObject answer in answerSystem) {
-                    if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer1) {
-                        Debug.Log("answer1");
-                        videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video1 + ".mp4";
-                        videoLoader.LoadVideo();
-                        _QAManager.HideQuestionAnswer();
-                       // Answer1Video();
-                    }
-
-                    if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer2") {
-                        Debug.Log("answer2");
-                      //  videoLoader.LoadVideo(v_data.video2);
-                        _QAManager.HideQuestionAnswer();
-                        Answer2Video();
-                    }
-
-                    if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer3")
-                    {
-                      //  videoLoader.LoadVideo(v_data.video3);
-                        _QAManager.HideQuestionAnswer();
-                        Answer3Video();
-                    }
-
-                    if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer4")
-                    {
-                       // videoLoader.LoadVideo(v_data.video4);
-                        _QAManager.HideQuestionAnswer();
-                        Answer4Video();
-                    }
-                }  
-            }*/
-        
-    }
-
-    private void Answer1Video()
-    {
-        if (videoPlayer.GetCurrentState() == MediaPlayerCtrl.MEDIAPLAYER_STATE.END)
-        {
-            
-            if (!b_data.createAnswer1)
-            {
-                //videoPlayer.m_strFileName = videoPath + v_data.nextVideo0 + ".mp4";
-                currentVideo = v_data.nextVideo1;
-               // videoLoader.LoadVideo(currentVideo);
-            }
-            else
-            {
-                _QAManager.ShowQuestionAnswer(q_data.question1, a_data.answer1_1, a_data.answer1_2, a_data.answer1_3, a_data.answer1_4, a_data.numberOfAnswers1);
-                foreach (GameObject answer in answerSystem)
-                {
-                    if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer1_1)
-                    {
-                        Debug.Log("answer1-1");
-                       // videoLoader.LoadVideo(v_data.video1_1);
-                        _QAManager.HideQuestionAnswer();
-                       
-                    }
-
-                    if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer2")
-                    {
-                        Debug.Log("answer1-2");
-                       // videoLoader.LoadVideo(v_data.video1_2);
-                        _QAManager.HideQuestionAnswer();
-                       
-                    }
-
-                    if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer3")
-                    {
-                       // videoLoader.LoadVideo(v_data.video1_3);
-                        _QAManager.HideQuestionAnswer();
-                       
-                    }
-
-                    if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer4")
-                    {
-                       // videoLoader.LoadVideo(v_data.video1_4);
-                        
-                        _QAManager.HideQuestionAnswer();
-                      
-                    }
+                if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer2) {
+                    SceneManager.LoadScene("Video2");
+                }
+                if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer3) {
+                    SceneManager.LoadScene("Video3");
+                }
+                if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer4) {
+                    SceneManager.LoadScene("Video4");
                 }
             }
         }
     }
 
-    private void Answer2Video()
-    {
-        if (videoPlayer.GetCurrentState() == MediaPlayerCtrl.MEDIAPLAYER_STATE.END)
-        {
-            if (!b_data.createAnswer2)
-            {
-                //videoPlayer.m_strFileName = videoPath + v_data.nextVideo0 + ".mp4";
-                currentVideo = v_data.nextVideo2;
-               // videoLoader.LoadVideo(currentVideo);
-                
-            }
-            else
-            {
-                _QAManager.ShowQuestionAnswer(q_data.question2, a_data.answer2_1, a_data.answer2_2, a_data.answer2_3, a_data.answer2_4, a_data.numberOfAnswers2);
-                foreach (GameObject answer in answerSystem)
-                {
-                    if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer1")
-                    {
-                        Debug.Log("answer2-1");
-                       // videoLoader.LoadVideo(v_data.video2_1);
-                        _QAManager.HideQuestionAnswer();
+    void Sequence_1() {
+        if (!b_data.createAnswer1 && endVideo) {
+            SceneManager.LoadScene("NextVideo1");
+        }
 
-                    }
+        if (b_data.createAnswer1 && endVideo) {
+            _QAManager.ShowQuestionAnswer(q_data.question1, a_data.answer1_1, a_data.answer1_2, a_data.answer1_3, a_data.answer1_4, a_data.numberOfAnswers1);
 
-                    if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer2")
-                    {
-                        Debug.Log("answer2-2");
-                      // videoLoader.LoadVideo(v_data.video2_2);
-                        _QAManager.HideQuestionAnswer();
-
-                    }
-
-                    if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer3")
-                    {
-                      // videoLoader.LoadVideo(v_data.video2_3);
-                        _QAManager.HideQuestionAnswer();
-
-                    }
-
-                    if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer4")
-                    {
-                      //  videoLoader.LoadVideo(v_data.video2_4);
-                        _QAManager.HideQuestionAnswer();
-
-                    }
+            foreach (GameObject answer in answerSystem) {
+                if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer1_1) {
+                    SceneManager.LoadScene("Video1-1");
+                }
+                if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer1_2) {
+                    SceneManager.LoadScene("Video1-2");
+                }
+                if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer1_3) {
+                    SceneManager.LoadScene("Video1-3");
+                }
+                if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer1_4) {
+                    SceneManager.LoadScene("Video1-4");
                 }
             }
         }
     }
 
-    private void Answer3Video()
-    {
-        if (videoPlayer.GetCurrentState() == MediaPlayerCtrl.MEDIAPLAYER_STATE.END)
-        {
-            if (!b_data.createAnswer3)
-            {
-                //videoPlayer.m_strFileName = videoPath + v_data.nextVideo0 + ".mp4";
-                currentVideo = v_data.nextVideo3;
-               // videoLoader.LoadVideo(currentVideo);
-            }
-            else
-            {
-                _QAManager.ShowQuestionAnswer(q_data.question3, a_data.answer3_1, a_data.answer3_2, a_data.answer3_3, a_data.answer3_4, a_data.numberOfAnswers3);
-                foreach (GameObject answer in answerSystem)
-                {
-                    if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer1")
-                    {
-                        Debug.Log("answer3-1");
-                       // videoLoader.LoadVideo(v_data.video3_1);                        
-                        _QAManager.HideQuestionAnswer();
+    void Sequence_2() {
+        if (!b_data.createAnswer2 && endVideo) {
+            SceneManager.LoadScene("NextVideo2");
+        }
 
-                    }
+        if (b_data.createAnswer2 && endVideo) {
+            _QAManager.ShowQuestionAnswer(q_data.question2, a_data.answer2_1, a_data.answer2_2, a_data.answer2_3, a_data.answer2_4, a_data.numberOfAnswers2);
 
-                    if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer2")
-                    {
-                        Debug.Log("answer3-2");
-                      // videoLoader.LoadVideo(v_data.video3_2);
-                        _QAManager.HideQuestionAnswer();
-
-                    }
-
-                    if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer3")
-                    {
-                       // videoLoader.LoadVideo(v_data.video3_3);
-                        _QAManager.HideQuestionAnswer();
-
-                    }
-
-                    if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer4")
-                    {
-                       // videoLoader.LoadVideo(v_data.video3_4);
-                        _QAManager.HideQuestionAnswer();
-
-                    }
+            foreach (GameObject answer in answerSystem) {
+                if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer2_1) {
+                    SceneManager.LoadScene("Video2-1");
+                }
+                if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer2_2) {
+                    SceneManager.LoadScene("Video2-2");
+                }
+                if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer2_3) {
+                    SceneManager.LoadScene("Video2-3");
+                }
+                if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer2_4) {
+                    SceneManager.LoadScene("Video2-4");
                 }
             }
         }
     }
 
-    private void Answer4Video()
-    {
-        if (videoPlayer.GetCurrentState() == MediaPlayerCtrl.MEDIAPLAYER_STATE.END)
-        {
-            if (!b_data.createAnswer4)
-            {
-                //videoPlayer.m_strFileName = videoPath + v_data.nextVideo0 + ".mp4";
-                currentVideo = v_data.nextVideo4;
-              // videoLoader.LoadVideo(currentVideo);
+    void Sequence_3() {
+        if (!b_data.createAnswer3 && endVideo) {
+            SceneManager.LoadScene("NextVideo3");
+        }
+
+        if (b_data.createAnswer3 && endVideo) {
+            _QAManager.ShowQuestionAnswer(q_data.question3, a_data.answer3_1, a_data.answer3_2, a_data.answer3_3, a_data.answer3_4, a_data.numberOfAnswers3);
+
+            foreach (GameObject answer in answerSystem) {
+                if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer3_1) {
+                    SceneManager.LoadScene("Video3-1");
+                }
+                if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer3_2) {
+                    SceneManager.LoadScene("Video3-2");
+                }
+                if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer3_3) {
+                    SceneManager.LoadScene("Video3-3");
+                }
+                if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer3_4) {
+                    SceneManager.LoadScene("Video3-4");
+                }
             }
-            else
-            {
-                _QAManager.ShowQuestionAnswer(q_data.question4, a_data.answer4_1, a_data.answer4_2, a_data.answer4_3, a_data.answer4_4, a_data.numberOfAnswers4);
-                foreach (GameObject answer in answerSystem)
-                {
-                    if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer1")
-                    {
-                        Debug.Log("answer4-1");
-                        //videoLoader.LoadVideo(v_data.video4_1);
-                        _QAManager.HideQuestionAnswer();
+        }
+    }
 
-                    }
+    void Sequence_4() {
+        if (!b_data.createAnswer4 && endVideo) {
+            SceneManager.LoadScene("NextVideo4");
+        }
 
-                    if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer2")
-                    {
-                        Debug.Log("answer4-2");
-                       //videoLoader.LoadVideo(v_data.video4_2);
-                        _QAManager.HideQuestionAnswer();
+        if (b_data.createAnswer4 && endVideo) {
+            _QAManager.ShowQuestionAnswer(q_data.question4, a_data.answer4_1, a_data.answer4_2, a_data.answer4_3, a_data.answer4_4, a_data.numberOfAnswers4);
 
-                    }
-
-                    if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer3")
-                    {
-                        //videoLoader.LoadVideo(v_data.video4_3);
-                        _QAManager.HideQuestionAnswer();
-
-                    }
-
-                    if (answer.GetComponent<AnswerSystem>().answerGiven == "Answer4")
-                    {
-                       //videoLoader.LoadVideo(v_data.video4_4);
-                        _QAManager.HideQuestionAnswer();
-
-                    }
+            foreach (GameObject answer in answerSystem) {
+                if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer4_1) {
+                    SceneManager.LoadScene("Video4-1");
+                }
+                if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer4_2) {
+                    SceneManager.LoadScene("Video4-2");
+                }
+                if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer4_3) {
+                    SceneManager.LoadScene("Video4-3");
+                }
+                if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer4_4) {
+                    SceneManager.LoadScene("Video4-4");
                 }
             }
         }

@@ -5,9 +5,69 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/LoginScreen.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
   - enabled: 1
+    path: Assets/Scenes/Bakery.unity
+  - enabled: 1
+    path: Assets/Scenes/Checkout.unity
+  - enabled: 1
+    path: Assets/Scenes/Grocery.unity
+  - enabled: 1
+    path: Assets/Scenes/Hygene.unity
+  - enabled: 1
+    path: Assets/Scenes/Logistics.unity
+  - enabled: 1
     path: Assets/Scenes/Slaughterhouse.unity
+  - enabled: 1
+    path: Assets/Scenes/Video1.unity
+  - enabled: 1
+    path: Assets/Scenes/Video1-1.unity
+  - enabled: 1
+    path: Assets/Scenes/Video1-2.unity
+  - enabled: 1
+    path: Assets/Scenes/Video1-3.unity
+  - enabled: 1
+    path: Assets/Scenes/Video1-4.unity
+  - enabled: 1
+    path: Assets/Scenes/Video2.unity
+  - enabled: 1
+    path: Assets/Scenes/Video2-1.unity
+  - enabled: 1
+    path: Assets/Scenes/Video2-2.unity
+  - enabled: 1
+    path: Assets/Scenes/Video2-3.unity
+  - enabled: 1
+    path: Assets/Scenes/Video2-4.unity
+  - enabled: 1
+    path: Assets/Scenes/Video3.unity
+  - enabled: 1
+    path: Assets/Scenes/Video3-1.unity
+  - enabled: 1
+    path: Assets/Scenes/Video3-2.unity
+  - enabled: 1
+    path: Assets/Scenes/Video3-3.unity
+  - enabled: 1
+    path: Assets/Scenes/Video3-4.unity
+  - enabled: 1
+    path: Assets/Scenes/Video4.unity
+  - enabled: 1
+    path: Assets/Scenes/Video4-1.unity
+  - enabled: 1
+    path: Assets/Scenes/Video4-2.unity
+  - enabled: 1
+    path: Assets/Scenes/Video4-3.unity
+  - enabled: 1
+    path: Assets/Scenes/Video4-4.unity
+  - enabled: 1
+    path: Assets/Scenes/NextVideo0.unity
+  - enabled: 1
+    path: Assets/Scenes/NextVideo1.unity
+  - enabled: 1
+    path: Assets/Scenes/NextVideo2.unity
+  - enabled: 1
+    path: Assets/Scenes/NextVideo3.unity
+  - enabled: 1
+    path: Assets/Scenes/NextVideo4.unity

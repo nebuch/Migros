@@ -172,16 +172,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoData: {fileID: 0}
-  entryVideo: 
-  entryVideo1: 
-  entryVideo2: 
-  entryVideo3: 
-  entryVideo4: 
-  nextVideo: 
+  nextVideo0: 
   nextVideo1: 
   nextVideo2: 
   nextVideo3: 
   nextVideo4: 
+  video0: 
   video1: 
   video2: 
   video3: 
@@ -250,15 +246,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52499260a9305134cab03b7e209065d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  createAnswer: 0
   createAnswer1: 0
   createAnswer2: 0
   createAnswer3: 0
   createAnswer4: 0
-  noQuestion0: 0
-  noQuestion1: 0
-  noQuestion2: 0
-  noQuestion3: 0
-  noQuestion4: 0
   booleanData: {fileID: 0}
 --- !u!114 &114000012899817068
 MonoBehaviour:
@@ -271,11 +263,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c22c4d2d80be4d43920a2ef33617af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  v_data: {fileID: 0}
-  q_data: {fileID: 0}
-  b_data: {fileID: 0}
-  a_data: {fileID: 0}
-  videoPlayer: {fileID: 0}
+  v_data: {fileID: 114000010432358606}
+  q_data: {fileID: 114000013471176746}
+  a_data: {fileID: 114000010969695436}
+  b_data: {fileID: 114000011167076678}
+  _QAManager: {fileID: 114000010329500214, guid: d777d7820dc1c2848a3f9a949a44eddf,
+    type: 2}
+  videoPlayer: {fileID: 11417252, guid: 403088882ac92734287c2ab4c69108c9, type: 2}
+  cameraFade: {fileID: 11406742, guid: 140cb28123f778d4795e5766bd260dbb, type: 2}
+  videoLoader: {fileID: 114000010319372320, guid: 403088882ac92734287c2ab4c69108c9,
+    type: 2}
+  answerSystem:
+  - {fileID: 1000013926064650, guid: 8f2312d4c63624e4882f0cf45fdae3b2, type: 2}
+  - {fileID: 1000013198820346, guid: 12bf5be2a6dac16498029e23b42c9964, type: 2}
+  - {fileID: 1000014054835566, guid: ce255eac97d28e64793b7df6f46cc340, type: 2}
+  - {fileID: 1000013919135648, guid: 19306cfc2df235c439a8df07e21f8093, type: 2}
+  sceneName: 
+  path: 
+  endVideo: 0
 --- !u!114 &114000013471176746
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -12,6 +12,7 @@ GameObject:
   - 23: {fileID: 2352704}
   - 95: {fileID: 9538122}
   - 114: {fileID: 11417252}
+  - 114: {fileID: 114000010319372320}
   m_Layer: 0
   m_Name: sphere
   m_TagString: Untagged
@@ -96,9 +97,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb521e9ace49d8546a83f420a0debd12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraFade: {fileID: 0}
   m_strFileName: 
   m_TargetMaterial:
   - {fileID: 196862}
+  m_CurrentState: 0
   m_bFullScreen: 0
   m_bSupportRockchip: 1
   m_ScaleValue: 0
@@ -117,3 +120,16 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 196862}
   m_IsPrefabParent: 1
+--- !u!114 &114000010319372320
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f7937c1db42ffd4d962627628c7d9ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _videoPlayer: {fileID: 11417252}
+  currentVideo: 

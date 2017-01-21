@@ -105,7 +105,7 @@ public class PlayButton : MonoBehaviour
        // videoLoader._currentVideo = videoName + ".mp4";
 #endif
 #if UNITY_ANDROID && !UNITY_EDITOR
-        videoLoader._currentVideo = "file:///" + Application.persistentDataPath + "/" + videoName + ".mp4";
+      //  videoLoader._currentVideo = "file:///" + Application.persistentDataPath + "/" + videoName + ".mp4";
 #endif
        // PlayerPrefs.SetString("video", videoLoader._currentVideo);
 
