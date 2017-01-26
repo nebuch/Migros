@@ -18,14 +18,33 @@ public class LevelManager : MonoBehaviour
     public string sceneName;
     public string path;
     public bool endVideo;
+    public bool lastVideo;
 
     void Start () { 
         sceneName = SceneManager.GetActiveScene().name;
         path = PlayerPrefs.GetString("path");
+
+        if(sceneName != "Slaughterhouse" && 
+            sceneName != "Hygene" && 
+            sceneName != "Checkout" && 
+            sceneName != "Grocery" && 
+            sceneName != "Logistics" && 
+            sceneName != "Bakery" && 
+            sceneName != "Video1" && 
+            sceneName != "Video2" && 
+            sceneName != "Video3" && 
+            sceneName != "Video4")
+        {
+            lastVideo = true;
+        }
     }
 
     void Update() {
        PlayFirstVideo();
+        if(lastVideo && endVideo)
+        {
+            GoToEndScene();
+        }
     }
 
     private void OnEnable() {
@@ -81,6 +100,7 @@ public class LevelManager : MonoBehaviour
                 break;
             case "Video1-1":
                 videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video1_1 + ".mp4";
+                lastVideo = true;
                 break;
             case "Video1-2":
                 videoPlayer.m_strFileName = videoLoader.GetVideoPath() + v_data.video1_2 + ".mp4";
@@ -178,6 +198,7 @@ public class LevelManager : MonoBehaviour
     void Sequence_1() {
         if (!b_data.createAnswer1 && endVideo) {
             SceneManager.LoadScene("NextVideo1");
+            
         }
 
         if (b_data.createAnswer1 && endVideo) {
@@ -186,15 +207,19 @@ public class LevelManager : MonoBehaviour
             foreach (GameObject answer in answerSystem) {
                 if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer1_1) {
                     SceneManager.LoadScene("Video1-1");
+                       
                 }
                 if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer1_2) {
                     SceneManager.LoadScene("Video1-2");
+                    
                 }
                 if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer1_3) {
                     SceneManager.LoadScene("Video1-3");
+                    
                 }
                 if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer1_4) {
                     SceneManager.LoadScene("Video1-4");
+                   
                 }
             }
         }
@@ -203,6 +228,7 @@ public class LevelManager : MonoBehaviour
     void Sequence_2() {
         if (!b_data.createAnswer2 && endVideo) {
             SceneManager.LoadScene("NextVideo2");
+            
         }
 
         if (b_data.createAnswer2 && endVideo) {
@@ -211,15 +237,19 @@ public class LevelManager : MonoBehaviour
             foreach (GameObject answer in answerSystem) {
                 if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer2_1) {
                     SceneManager.LoadScene("Video2-1");
+                    
                 }
                 if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer2_2) {
                     SceneManager.LoadScene("Video2-2");
+                    
                 }
                 if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer2_3) {
                     SceneManager.LoadScene("Video2-3");
+                    
                 }
                 if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer2_4) {
                     SceneManager.LoadScene("Video2-4");
+                    
                 }
             }
         }
@@ -228,6 +258,7 @@ public class LevelManager : MonoBehaviour
     void Sequence_3() {
         if (!b_data.createAnswer3 && endVideo) {
             SceneManager.LoadScene("NextVideo3");
+           
         }
 
         if (b_data.createAnswer3 && endVideo) {
@@ -236,15 +267,19 @@ public class LevelManager : MonoBehaviour
             foreach (GameObject answer in answerSystem) {
                 if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer3_1) {
                     SceneManager.LoadScene("Video3-1");
+                    
                 }
                 if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer3_2) {
                     SceneManager.LoadScene("Video3-2");
+                    
                 }
                 if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer3_3) {
                     SceneManager.LoadScene("Video3-3");
+                   
                 }
                 if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer3_4) {
                     SceneManager.LoadScene("Video3-4");
+                 
                 }
             }
         }
@@ -253,6 +288,7 @@ public class LevelManager : MonoBehaviour
     void Sequence_4() {
         if (!b_data.createAnswer4 && endVideo) {
             SceneManager.LoadScene("NextVideo4");
+            
         }
 
         if (b_data.createAnswer4 && endVideo) {
@@ -261,17 +297,26 @@ public class LevelManager : MonoBehaviour
             foreach (GameObject answer in answerSystem) {
                 if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer4_1) {
                     SceneManager.LoadScene("Video4-1");
+                    
                 }
                 if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer4_2) {
                     SceneManager.LoadScene("Video4-2");
+                    
                 }
                 if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer4_3) {
                     SceneManager.LoadScene("Video4-3");
+                    
                 }
                 if (answer.GetComponent<AnswerSystem>().answerGiven == a_data.answer4_4) {
                     SceneManager.LoadScene("Video4-4");
+                    
                 }
             }
         }
+    }
+
+    void GoToEndScene()
+    {
+        SceneManager.LoadScene("EndScene");
     }
 }
