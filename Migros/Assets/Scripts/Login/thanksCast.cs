@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
+using VRStandardAssets.Utils;
 
 public class thanksCast : MonoBehaviour {
 
 	public Transform _newUser;
 	public Transform _newScenerio;
+	public VRCameraFade _cameraFade;
 
 
 	// Use this for initialization
@@ -17,13 +20,17 @@ public class thanksCast : MonoBehaviour {
 	
 		RaycastHit hitted;
 		if (Physics.Raycast (transform.position, transform.forward, out hitted, 1000)) {
-			if (hitted.transform == _newUser) {
+			if (Input.GetKeyDown (KeyCode.Mouse0)) {
+				if (hitted.transform == _newUser) {
 
-				Debug.Log ("newUser");
-			}
-			if (hitted.transform == _newScenerio) {
+					Debug.Log ("newUser");
+					StartCoroutine(_cameraFade.BeginFadeOut(true));
+				}
+				if (hitted.transform == _newScenerio) {
 
-				Debug.Log ("newScenerio");
+					Debug.Log ("newScenerio");
+					StartCoroutine(_cameraFade.BeginFadeOut(true));
+				}
 			}
 		}
 			}

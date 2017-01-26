@@ -852,6 +852,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _newUser: {fileID: 1234447000}
   _newScenerio: {fileID: 1058689174}
+  _cameraFade: {fileID: 335404331}
 --- !u!114 &335404327
 MonoBehaviour:
   m_ObjectHideFlags: 0
