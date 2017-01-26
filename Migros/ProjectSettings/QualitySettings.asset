@@ -31,7 +31,9 @@ QualitySettings:
     particleRaycastBudget: 4096
     asyncUploadTimeSlice: 2
     asyncUploadBufferSize: 4
-    excludedTargetPlatforms: []
+    excludedTargetPlatforms:
+    - Android
+    - Standalone
   m_PerPlatformDefaultQuality:
     Android: 0
     Standalone: 0
