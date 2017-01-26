@@ -317,6 +317,6 @@ public class LevelManager : MonoBehaviour
 
     void GoToEndScene()
     {
-        SceneManager.LoadScene("EndScene");
+        SceneManager.LoadScene("ThanksScreen");
     }
 }

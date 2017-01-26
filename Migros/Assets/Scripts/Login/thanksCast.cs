@@ -18,19 +18,21 @@ public class thanksCast : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-		RaycastHit hitted;
-		if (Physics.Raycast (transform.position, transform.forward, out hitted, 1000)) {
+		RaycastHit hit;
+		if (Physics.Raycast (transform.position, transform.forward, out hit, 1000)) {
 			if (Input.GetKeyDown (KeyCode.Mouse0)) {
-				if (hitted.transform == _newUser) {
+				if (hit.transform == _newUser) {
 
 					Debug.Log ("newUser");
 					StartCoroutine(_cameraFade.BeginFadeOut(true));
+                    SceneManager.LoadScene("LoginScreen");
 				}
-				if (hitted.transform == _newScenerio) {
+				if (hit.transform == _newScenerio) {
 
 					Debug.Log ("newScenerio");
 					StartCoroutine(_cameraFade.BeginFadeOut(true));
-				}
+                    SceneManager.LoadScene("MainMenu");
+                }
 			}
 		}
 			}
